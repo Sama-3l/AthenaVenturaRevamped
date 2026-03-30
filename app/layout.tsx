@@ -22,7 +22,7 @@ const fustat = localFont({
     { path: '../fonts/fustat/Fustat-Light.ttf', weight: '300' },
     { path: '../fonts/fustat/Fustat-Regular.ttf', weight: '400' },
     { path: '../fonts/fustat/Fustat-Medium.ttf',  weight: '500' },
-    { path: '../fonts/fustat/Fustat-Semibold.ttf',  weight: '600' },
+    { path: '../fonts/fustat/Fustat-SemiBold.ttf',  weight: '600' },
     { path: '../fonts/fustat/Fustat-Bold.ttf',    weight: '700' },
     { path: '../fonts/fustat/Fustat-ExtraBold.ttf',    weight: '800' },
   ],
