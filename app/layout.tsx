@@ -1,16 +1,34 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import localFont from 'next/font/local'
+import Cta from "./_components/cta/Cta";
+import NavBar from "./_components/navbar/NavBar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const ibaraItalic = localFont({
+  src: '../fonts/ibarra_real_nova/IbarraRealNova-Italic-Variable.ttf',
+  variable: '--font-ibarra-italic',
+  display: 'swap',
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const ibaraRegular = localFont({
+  src: '../fonts/ibarra_real_nova/IbarraRealNova-Variable.ttf',
+  variable: '--font-ibarra-regular',
+  display: 'swap',
+})
+
+const fustat = localFont({
+  src: [
+    { path: '../fonts/fustat/Fustat-ExtraLight.ttf', weight: '200' },
+    { path: '../fonts/fustat/Fustat-Light.ttf', weight: '300' },
+    { path: '../fonts/fustat/Fustat-Regular.ttf', weight: '400' },
+    { path: '../fonts/fustat/Fustat-Medium.ttf',  weight: '500' },
+    { path: '../fonts/fustat/Fustat-Semibold.ttf',  weight: '600' },
+    { path: '../fonts/fustat/Fustat-Bold.ttf',    weight: '700' },
+    { path: '../fonts/fustat/Fustat-ExtraBold.ttf',    weight: '800' },
+  ],
+  variable: '--font-fustat',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,9 +43,15 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${ibaraRegular.variable} ${ibaraItalic.variable} ${fustat.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <main>
+        {children}
+        </main>
+        <Cta />
+        <NavBar />
+      </body>
     </html>
   );
 }

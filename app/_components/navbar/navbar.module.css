@@ -1,0 +1,101 @@
+.navbar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  align-items: flex-end;
+  width: 10vw;
+}
+
+.menu:hover {
+    width: auto;
+}
+
+.menu_item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.text {
+  color: var(--color-foreground);
+  font-family: var(--font-fustat);
+  font-weight: 200;
+  font-size: 20px;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateX(16px);
+  transition: opacity 0.4s ease, 
+              transform 0.4s ease, 
+              max-width 0.4s ease;
+}
+
+.text_visible {
+  opacity: 1;
+  max-width: 300px;
+  transform: translateX(0);
+}
+
+/* Small dot shown by default */
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--foreground);
+  flex-shrink: 0;
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              opacity 0.4s ease;
+  animation: pulse 3s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+.dot_hidden {
+  transform: translateX(40px);
+  opacity: 0;
+  animation: none;
+}
+
+/* Stop pulsing once user discovers the menu */
+.menu:hover .dot {
+  transform: translateX(40px); /* ✅ slides off to the right */
+  opacity: 0;
+  animation: none;
+}
+
+.menu:hover .text {
+  opacity: 1;
+  width: auto;
+  transform: translateX(0); /* ✅ slides in from right */
+}
+
+.menu_item:hover .text {
+  font-weight: 400;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.3; transform: scale(0.7); }
+}
+
+.logo{
+    position: absolute;
+    right: 0;
+    margin-right: 32px;
+}
+
