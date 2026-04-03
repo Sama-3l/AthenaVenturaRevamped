@@ -1,0 +1,158 @@
+/* .service_title {
+    font-family: var(--font-ibarra-italic);
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -5%;
+    white-space: pre-line;
+    color: var(--color-background);
+    transition: color 0.5s;
+}
+
+:global(.group:hover) .service_title {
+    color: var(--color-foreground);
+}
+
+.service_number {
+    font-family: var(--font-fustat);
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: -0.5%;
+    color: var(--color-background);
+    padding-left: 4px;
+    transition: color 0.5s;
+}
+
+:global(.group:hover) .service_number {
+    color: var(--color-foreground);
+}
+
+.service_body {
+    font-family: var(--font-fustat);
+    font-size: 16px;
+    letter-spacing: -0.5%;
+    color: var(--color-background);
+    padding-left: 4px;
+    width: 100%;
+    transition: color 0.5s;
+}
+
+:global(.group:hover) .service_body {
+    color: var(--color-foreground);
+}
+
+.bullet_dot {
+    background-color: var(--color-background);
+    transition: background-color 0.5s;
+}
+
+:global(.group:hover) .bullet_dot {
+    background-color: var(--color-foreground);
+}
+
+.cta {
+    font-family: var(--font-fustat);
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+    letter-spacing: -5%;
+    color: var(--color-foreground);
+    transition: color 0.5s;
+}
+
+:global(.group:hover) .cta {
+    color: var(--color-background);
+}
+
+.arrow path {
+    transition: fill 0.5s;
+}
+
+.arrow {
+    transition: transform 0.5s;
+}
+
+:global(.group:hover) .arrow {
+    transform: rotate(-45deg);
+} */
+
+.service_title {
+    font-family: var(--font-ibarra-italic);
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -5%;
+    white-space: pre-line;
+    color: var(--color-background);
+    transition: color 0.5s;
+}
+
+:global(.group:hover) .service_title {
+    color: var(--color-foreground);
+}
+
+.service_number {
+    font-family: var(--font-fustat);
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: -0.5%;
+    color: var(--color-background);
+    padding-left: 4px;
+    transition: color 0.5s;
+}
+
+:global(.group:hover) .service_number {
+    color: var(--color-foreground);
+}
+
+.service_body {
+    font-family: var(--font-fustat);
+    font-size: 16px;
+    letter-spacing: -0.5%;
+    color: var(--color-background);
+    padding-left: 4px;
+    width: 100%;
+    transition: color 0.5s;
+}
+
+:global(.group:hover) .service_body {
+    color: var(--color-foreground);
+}
+
+.bullet_dot {
+    background-color: var(--color-background);
+    transition: background-color 0.5s;
+}
+
+:global(.group:hover) .bullet_dot {
+    background-color: var(--color-foreground);
+}
+
+.cta {
+    font-family: var(--font-fustat);
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+    letter-spacing: -5%;
+    color: var(--color-background);
+    transition: color 0.5s;
+}
+
+:global(.group:hover) .cta {
+    color: var(--color-foreground);
+}
+
+.arrow {
+    transition: transform 0.5s;
+}
+
+:global(.group:hover) .arrow {
+    transform: rotate(-45deg);
+}
+
+.arrow path {
+    transition: fill 0.5s;
+    fill: var(--color-background);
+}
+
+:global(.group:hover) .arrow path {
+    fill: var(--color-foreground);
+}
