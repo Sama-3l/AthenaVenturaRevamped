@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useRef } from "react";
-import WhatWeDo from "./_sections/WhatWeDo";
+import WhatWeDo from "./_sections/WhatWeDo/WhatWeDo";
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null)

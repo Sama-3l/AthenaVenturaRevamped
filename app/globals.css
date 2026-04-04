@@ -114,6 +114,7 @@ h1.logo {
 .page-title{
   font-family: var(--font-ibarra-italic);
   font-size: 4vw;
+  line-height: 2vw;
   letter-spacing: -5%;
 }
 
@@ -122,4 +123,5 @@ h1.logo {
   font-size: 12px;
   letter-spacing: -0.5%;
   width: 20vw;
+  transform: translateY(8px);
 }

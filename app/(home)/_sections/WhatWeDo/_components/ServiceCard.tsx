@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import styles from './styles/service_card.module.css';
+import styles from '../styles/service_card.module.css';
 
 export default function ServiceCard({id, title, subtitle, bullets} : {id : number, title: string, subtitle : string, bullets: string[]}) {
     const isLastInRow = id % 3 === 0;
