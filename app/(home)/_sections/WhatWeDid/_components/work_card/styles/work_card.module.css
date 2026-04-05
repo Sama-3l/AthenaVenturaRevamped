@@ -1,0 +1,136 @@
+.card {
+  width: 100%;
+  overflow: hidden;
+}
+
+.card_top {
+  padding: 24px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tags_row {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.tag {
+  font-family: var(--font-fustat);
+  font-size: 12px;
+  letter-spacing: -2.5%;
+  border-radius: 8px;
+  line-height: 125%;
+  padding: 8px 16px;
+}
+
+.content_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.title_block {
+  flex: 1;
+  align-items: end;
+}
+
+.title_line {
+  font-family: var(--font-ibarra-italic);
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -5%;
+}
+
+.body_text {
+  font-family: var(--font-fustat);
+  font-size: 12px;
+  line-height: 1.6;
+  width: 35svw;
+  flex-shrink: 0;
+}
+
+/* Expandable section */
+.carousel_section {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.carousel_expanded {
+  max-height: 400px;
+}
+
+/* Carousel */
+.carousel_container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  cursor: none;
+  padding: 24px 0;
+}
+
+.image_carousel_track {
+  display: flex;
+  flex-direction: row;
+  will-change: transform;
+}
+
+.image_set {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  padding-right: 8px;
+  flex-shrink: 0;
+}
+
+.fade_left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.fade_right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.custom_cursor {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--color-foreground);
+  color: var(--color-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  animation: cursor_pop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.cursor_text {
+  font-family: var(--font-fustat);
+  font-size: 13px;
+  font-weight: 600;
+  user-select: none;
+}
+
+@keyframes cursor_pop {
+  0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}

@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import styles from './styles/image_carousel.module.css'
 
-export default function ImageCarousel() {
+export default function ImageCarousel({images} : {images : string[]}) {
   const trackRef = useRef<HTMLDivElement>(null)
   const [hovered, setHovered] = useState(false)
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 })
@@ -11,11 +11,6 @@ export default function ImageCarousel() {
   const dragStart = useRef({ x: 0, scrollLeft: 0 })
   const scrollPos = useRef(0)
   const animationRef = useRef<number>(0)
-
-  const images = ["/Theo/theo_logo.png", 
-    "/Theo/theo_preview.png", 
-    "/Soho/soho_website_image.png", 
-    "/Cricklo/cricklo_4.png"]
 
   // Auto scroll
   useEffect(() => {
@@ -63,7 +58,7 @@ export default function ImageCarousel() {
 
   return (
     <div
-      className={`pt-10 w-full relative ${styles.carousel_container}`}
+      className={`w-full relative ${styles.carousel_container}`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => { setHovered(false); setIsDragging(false) }}
       onMouseMove={(e) => { handleMouseMove(e); handleMouseDrag(e) }}
@@ -83,12 +78,12 @@ export default function ImageCarousel() {
       <div className={styles.image_carousel_track} ref={trackRef}>
         <div className={styles.image_set}>
           {images.map((image, index) => (
-            <Image key={index} src={image} height={300} width={300} alt="" className="h-75 w-auto shrink-0 pointer-events-none" />
+            <Image key={index} src={image} height={300} width={300} alt="" unoptimized loading="eager" className="h-75 w-auto shrink-0 pointer-events-none" />
           ))}
         </div>
         <div className={styles.image_set}>
           {images.map((image, index) => (
-            <Image key={index} src={image} height={300} width={300} alt="" className="h-75 w-auto shrink-0 pointer-events-none" />
+            <Image key={index} src={image} height={300} width={300} alt="" unoptimized loading="eager" className="h-75 w-auto shrink-0 pointer-events-none" />
           ))}
         </div>
       </div>

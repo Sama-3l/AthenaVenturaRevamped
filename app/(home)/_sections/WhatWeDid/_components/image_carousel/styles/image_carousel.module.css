@@ -1,5 +1,6 @@
 .carousel_container {
   cursor: none;
+  overflow: hidden;
 }
 
 .image_carousel_track {

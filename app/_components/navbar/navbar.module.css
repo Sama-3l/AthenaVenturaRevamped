@@ -5,6 +5,7 @@
   bottom: 0;
   padding: 32px;
   display: flex;
+  z-index: 100;
   flex-direction: column;
 }
 
