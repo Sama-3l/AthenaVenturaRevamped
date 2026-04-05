@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useRef } from "react";
 import WhatWeDo from "./_sections/WhatWeDo/WhatWeDo";
+import WhatWeDid from "./_sections/WhatWeDid/WhatWeDid";
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -63,6 +64,7 @@ export default function Home() {
        
 
       <WhatWeDo />
+      <WhatWeDid />
     </div>
   )
 }
