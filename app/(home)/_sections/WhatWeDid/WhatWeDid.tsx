@@ -39,8 +39,9 @@ export default function WhatWeDid() {
             </div>
           </div>
         </div>      
-        <ImageCarousel images={["/Theo/theo_logo.png", "/Theo/theo_preview.png", "/Soho/soho_website_image.png", "/Cricklo/cricklo_4.png"]}/>      
+        <ImageCarousel images={["/Theo/theo_logo.png", "/Theo/theo_preview.png", "/Soho/soho_website_image.png", "/Cricklo/cricklo_4.png"]}/> 
     </div>
+    <div className='h-[50vh]'></div>
       
     <div className='flex flex-col'>
       <WorkCard
