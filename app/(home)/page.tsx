@@ -6,6 +6,7 @@ import WhatWeDo from "./_sections/WhatWeDo/WhatWeDo";
 import WhatWeDid from "./_sections/WhatWeDid/WhatWeDid";
 import TheCompany from "./_sections/TheCompany/TheCompany";
 import WhatWeOffer from "./_sections/WhatWeOffer/WhatWeOffer";
+import ReachOutToUs from "./_sections/ReachOutToUs/ReachOutToUs";
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -69,6 +70,7 @@ export default function Home() {
       <WhatWeDid />
       <TheCompany />
       <WhatWeOffer />
+      <ReachOutToUs />
     </div>
   )
 }
