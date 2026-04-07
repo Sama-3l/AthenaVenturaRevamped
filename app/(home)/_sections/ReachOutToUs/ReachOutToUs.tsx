@@ -2,6 +2,7 @@ import PageHeader from '@/app/_components/page_header'
 import React from 'react'
 import styles from './styles/reach_out_to_us.module.css'
 import CalComponent from './_components/Cal';
+import ContactForm from './_components/form/contact_form';
 
 export default function ReachOutToUs() {
   return (
@@ -40,7 +41,7 @@ export default function ReachOutToUs() {
                     </p>
                 </div>
             </div>
-
+            {/* <ContactForm /> */}
         </div>
     </div>
   )

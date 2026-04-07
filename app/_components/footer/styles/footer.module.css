@@ -1,0 +1,6 @@
+.footer_logo{
+    font-family: var(--font-ibarra-italic);
+    font-weight: 800;
+    color: var(--color-foreground);
+    font-size: 13.85vw;
+}
