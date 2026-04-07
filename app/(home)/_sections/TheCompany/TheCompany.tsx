@@ -8,7 +8,7 @@ export default function TheCompany() {
   return (
     <div className='flex flex-col'>
         <div className='h-20' />
-        <div className='bg-(--color-foreground)'>
+        <div className='bg-(--color-foreground) h-svh'>
           <PageHeader title='The Company' />
           <div className='py-8 px-12 flex flex-rol justify-between'>
             <p className={`font-bold tracking-[-5%] ${styles.body_text}`}>WE</p>

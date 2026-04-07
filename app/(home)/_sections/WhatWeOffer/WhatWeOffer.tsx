@@ -4,7 +4,7 @@ import PackageCard from './_components/PackageCard/PackageCard'
 
 export default function WhatWeOffer() {
   return (
-    <div>
+    <div className='pb-24'>
         <PageHeader title="What we offer" className = "text-(--color-foreground) border-(--color-foreground) pt-12"/>
         <div className='py-16 px-12'>
           <p className='font-(family-name:--font-fustat) tracking-[-0.5%]'>Every engagement starts with a scoping call. Prices are starting points.</p>
