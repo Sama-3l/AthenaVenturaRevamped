@@ -1,0 +1,36 @@
+.package_title{
+    font-family: var(--font-ibarra-italic);
+    font-weight: 600;
+    color: var(--color-background);
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -2.5%;
+}
+
+.package_deadline{
+    font-family: var(--font-ibarra-regular);
+    color: var(--color-background);
+    font-size: 16px;
+    letter-spacing: -2.5%;
+}
+
+.deliverable_heading {
+    font-family: var(--font-fustat);
+    font-weight: 800;
+    color: var(--color-background);
+    font-size: 12px;
+}
+
+.deliverable_subheading {
+    font-family: var(--font-fustat);
+    font-weight: 800;
+    color: var(--color-background);
+    opacity: 0.5;
+    font-size: 12px;
+}
+
+.deliverable_body {
+    font-family: var(--font-fustat);
+    color: var(--color-background);
+    font-size: 12px;
+}

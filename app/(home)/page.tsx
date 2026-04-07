@@ -5,6 +5,7 @@ import { useRef } from "react";
 import WhatWeDo from "./_sections/WhatWeDo/WhatWeDo";
 import WhatWeDid from "./_sections/WhatWeDid/WhatWeDid";
 import TheCompany from "./_sections/TheCompany/TheCompany";
+import WhatWeOffer from "./_sections/WhatWeOffer/WhatWeOffer";
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -67,6 +68,7 @@ export default function Home() {
       <WhatWeDo />
       <WhatWeDid />
       <TheCompany />
+      <WhatWeOffer />
     </div>
   )
 }
