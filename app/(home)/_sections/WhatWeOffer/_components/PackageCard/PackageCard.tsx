@@ -100,7 +100,7 @@ export default function PackageCard({color = "bg-(--color-foreground)", title, d
                 <p className='font-(family-name:--font-fustat) text-[12px] tracking-[-5%] font-bold leading-3' style={{ color: scheme.text }}>
                     starting from
                 </p>
-                <p className='font-(family-name:--font-fustat) text-[64px] tracking-[-5%] font-bold leading-16' style={{ color: scheme.text }}>
+                <p className='font-(family-name:--font-fustat) text-[56px] tracking-[-5%] font-bold leading-16' style={{ color: scheme.text }}>
                     {amount}
                 </p>
             </div>
