@@ -61,7 +61,9 @@
 
 .btn_outline {
   padding: 12px 32px;
-  background: transparent;
+  background: color-mix(in srgb, #FFF9F2 2%, transparent);
+  backdrop-filter: blur(16px);
+  
   color: var(--foreground);
   border: 1px solid color-mix(in srgb, var(--foreground) 50%, transparent);
   border-radius: 32px;
