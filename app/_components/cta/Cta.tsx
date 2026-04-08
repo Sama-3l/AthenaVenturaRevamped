@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import styles from './cta.module.css'
 import { useTheme } from '@/app/lib/ThemeContext'
+import Link from 'next/link'
 
 export default function Cta() {
   const [visible, setVisible] = useState(true)
@@ -34,8 +35,13 @@ export default function Cta() {
         <p>2 slots available for Apr'26</p>
       </div>
       <div className={styles.cta_buttons}>
-        <button className={styles.btn_outline}>Get a Free Idea Consultancy</button>
-        <button className={styles.btn_primary}>Book a call</button>
+        {/* <Link href="">
+        </Link>         */}
+          <button className={styles.btn_outline} onClick={() =>
+              window.open("https://tally.so/r/0QJd16", "_blank", "noopener,noreferrer")
+            } >Get a Free Idea Consultancy
+          </button>
+        <button className={styles.btn_primary} >Book a call</button>
       </div>
     </div>
   )
