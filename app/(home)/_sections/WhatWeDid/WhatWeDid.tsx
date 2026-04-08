@@ -62,7 +62,7 @@ export default function WhatWeDid() {
       />
       <WorkCard
         title="distr1ct.one"
-        subtitle={<>Pause, work,chat,<br/>coffee. A cafe in Lucknow.</>}
+        subtitle={<>Pause, work, chat,<br/>coffee. A cafe in Lucknow.</>}
         body="A concept website for a new & different coffee place in Lucknow. They already had the brand design and menu, etc. done. The idea behind the website was to tell the story behind the store, welcome the audience make the place their comfort stop for work, meeting friends, etc. and business SEO."
         tags={["UI/UX", "Concept", "Framer Development"]}
         images={["/District/district_1.png", "/District/district_2.png", "/District/district_3.png", "/District/district_4.png", "/District/district_5.png"]}
