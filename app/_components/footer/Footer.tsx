@@ -11,7 +11,7 @@ export default function Footer() {
             <Image  src="/linkedin.svg" alt="My Logo" width={24} height={100} />
             <Image  src="/twitter.svg" alt="My Logo" width={24} height={100} />
         </div>
-        <div className='flex flex-row justify-between items-end pb-24'>
+        <div className='flex flex-row justify-between items-end pb-4'>
             <div className='flex flex-col gap-4'>
                 <p className='font-(family-name:--font-ibarra-italic) text-[16px] opacity-60 tracking-[-0.5%]'>
                     (In a good way ofc)
