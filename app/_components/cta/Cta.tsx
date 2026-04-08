@@ -1,23 +1,21 @@
 "use client"
 import React, { useEffect, useState } from 'react'
 import styles from './cta.module.css'
+import { useTheme } from '@/app/lib/ThemeContext'
 
 export default function Cta() {
   const [visible, setVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
+  const theme = useTheme()
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY
-
       if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        // Scrolling down — hide
         setVisible(false)
       } else {
-        // Scrolling up — show
         setVisible(true)
       }
-
       setLastScrollY(currentScrollY)
     }
 
@@ -26,12 +24,15 @@ export default function Cta() {
   }, [lastScrollY])
 
   return (
-    <div className={`${styles.cta_bar} ${visible ? styles.cta_visible : styles.cta_hidden}`}>
+    <div className={`
+      ${styles.cta_bar}
+      ${visible ? styles.cta_visible : styles.cta_hidden}
+      ${theme === 'inverted' ? styles.cta_inverted : ''}
+    `}>
       <div className={styles.cta_note}>
         <div className={styles.dot}></div>
         <p>2 slots available for Apr'26</p>
       </div>
-
       <div className={styles.cta_buttons}>
         <button className={styles.btn_outline}>Get a Free Idea Consultancy</button>
         <button className={styles.btn_primary}>Book a call</button>

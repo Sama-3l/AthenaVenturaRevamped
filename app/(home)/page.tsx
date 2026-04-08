@@ -65,12 +65,21 @@ export default function Home() {
         </div> 
       </div>
        
-
-      <WhatWeDo />
-      <WhatWeDid />
-      <TheCompany />
-      <WhatWeOffer />
-      <ReachOutToUs />
+       <div data-theme="inverted">
+        <WhatWeDo />
+       </div>
+       <div data-theme="default">
+        <WhatWeDid />
+       </div>
+       <div data-theme="inverted">
+        <TheCompany />
+       </div>
+       <div data-theme="default">
+        <WhatWeOffer />
+       </div>
+       <div data-theme="default">
+        <ReachOutToUs />
+       </div>   
     </div>
   )
 }

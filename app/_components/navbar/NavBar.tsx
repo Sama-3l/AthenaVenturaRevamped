@@ -2,12 +2,14 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
 import styles from './navbar.module.css'
+import { useTheme } from '@/app/lib/ThemeContext'
 
 export default function NavBar() {
   const [hovered, setHovered] = useState(false)
+  const theme = useTheme()
 
   return (
-    <div className={styles.navbar}>
+    <div className={`${styles.navbar} ${theme === 'inverted' ? styles.navbar_inverted : ''}`}>
       <Image className={styles.logo} src="/logo_white.svg" alt="My Logo" width={36} height={100} />
       <div
         className={styles.menu}

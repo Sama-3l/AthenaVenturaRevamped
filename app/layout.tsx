@@ -4,6 +4,7 @@ import localFont from 'next/font/local'
 import Cta from "./_components/cta/Cta";
 import NavBar from "./_components/navbar/NavBar";
 import Footer from "./_components/footer/Footer";
+import { ThemeProvider } from "./lib/ThemeContext";
 
 const ibaraItalic = localFont({
   src: '../fonts/ibarra_real_nova/IbarraRealNova-Italic-Variable.ttf',
@@ -47,12 +48,14 @@ export default function RootLayout({
       className={`${ibaraRegular.variable} ${ibaraItalic.variable} ${fustat.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <main>
-        {children}
-        <Footer />
-        </main>
-        <Cta />
-        <NavBar />
+        <ThemeProvider>
+          <main>
+          {children}
+          <Footer />
+          </main>
+          <Cta />
+          <NavBar />
+        </ThemeProvider>
       </body>
     </html>
   );
