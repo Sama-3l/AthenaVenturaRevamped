@@ -29,19 +29,19 @@ export default function ReachOutToUs() {
             
         </div>
         <div className='flex flex-row pt-15 pb-12'>
-            <div className='flex flex-col gap-8'>
+            <div className='flex flex-col gap-8 '>
                 <div className='px-6'>
                     <h2 className={styles.page_title}>
                         Contact Us
                     </h2>
                 </div>
-                <div className='flex flex-col gap-1 px-8 w-[40%]'>
+                <div className='flex flex-col gap-1 px-8 w-[70%]'>
                     <p className={styles.page_body}>
                     We are a small creative studio-cum-software development firm dedicated to launch of new ventures and transforming established brands. We curate captivating designs that lead our teams to bring your ideas and visions to life.<br /><br /><br />Building brands, apps and websites our team is here to help you start, grow or elevate your enterprise.
                     </p>
                 </div>
             </div>
-            {/* <ContactForm /> */}
+            <ContactForm />
         </div>
     </div>
   )
