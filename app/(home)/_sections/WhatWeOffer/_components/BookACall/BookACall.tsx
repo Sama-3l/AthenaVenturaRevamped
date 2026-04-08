@@ -1,12 +1,14 @@
 import React from 'react'
+import styles from './styles/BookACall.module.css'
 
 export default function BookACall({ bgColor = 'var(--color-background)', textColor = 'var(--color-foreground)' }: { bgColor?: string, textColor?: string }) {
   return (
-    <div
-      className='flex flex-col font-(family-name:--font-fustat) tracking-[-5%] text-[16px] w-full py-3 items-center rounded-full font-bold cursor-pointer'
+    <button
+      className={styles.btn}
       style={{ backgroundColor: bgColor, color: textColor }}
+      data-text="Book a call"
     >
-      Book a call
-    </div>
+      <span className={styles.btn_text}>Book a call</span>
+    </button>
   )
 }

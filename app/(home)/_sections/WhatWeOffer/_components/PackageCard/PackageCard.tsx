@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './styles/package_card.module.css';
-import BookACall from '../BookACall';
+import BookACall from '../BookACall/BookACall';
 
 interface PackageCard{
     title : string;
