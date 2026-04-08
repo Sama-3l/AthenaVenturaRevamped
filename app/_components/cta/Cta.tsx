@@ -35,13 +35,16 @@ export default function Cta() {
         <p>2 slots available for Apr'26</p>
       </div>
       <div className={styles.cta_buttons}>
-        {/* <Link href="">
-        </Link>         */}
-          <button className={styles.btn_outline} onClick={() =>
-              window.open("https://tally.so/r/0QJd16", "_blank", "noopener,noreferrer")
-            } >Get a Free Idea Consultancy
-          </button>
-        <button className={styles.btn_primary} >Book a call</button>
+        <button
+          className={styles.btn_outline}
+          data-text="Get a Free Idea Consultancy"
+          onClick={() => window.open("https://tally.so/r/0QJd16", "_blank", "noopener,noreferrer")}
+        >
+          <span>Get a Free Idea Consultancy</span>
+        </button>
+        <button className={styles.btn_primary} data-text="Book a call">
+          <span>Book a call</span>
+        </button>
       </div>
     </div>
   )
