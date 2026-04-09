@@ -34,61 +34,63 @@ export default function Home() {
 
   return (
     <div className="flex flex-col">
-      <div className="relative h-[150vh] bg-transparent">
-        <div className="absolute inset-0 z-0 heroGradient" />
-        <div
-          ref={containerRef}
-          className="relative top-0 w-full h-screen flex items-center justify-center z-10 bg-transparent"
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
-        >
-          <h1 className="logo">Athena Ventura</h1>
-          <div className="hero-image image-1">
-            <Image src="/cricklo_mockup_2.png" alt="" width={800} height={800} />
-          </div>
-          <div className="hero-image image-2">
-            <Image src="/soho_website_image.png" alt="" width={800} height={800} />
-          </div>
-          <div className="hero-image image-3">
-            <Image src="/helios_website_image.png" alt="" width={800} height={800} />
-          </div>
-          <div className="hero-image image-4">
-            <Image src="/bettersplit_image.png" alt="" width={800} height={800} />
-          </div>
-          <p className="hero-para para-1">
-            Good design  starts with thinking outside the box. In some cases, it’s the layout box we are talking about.
-          </p>
-          <p className="hero-para para-2">
-            Two Co-Founders curating designs and software from ideation to production.
-          </p>
-        
-        </div> 
-      </div>
-       <section id="what-we-do">
-          <div data-theme="inverted">
-            <WhatWeDo />
-          </div>
-       </section>
-       <section id="what-we-did">
-        <div data-theme="default">
-          <WhatWeDid />
+      <section id="home" >
+        <div className="relative h-[150vh] bg-transparent">
+          <div className="absolute inset-0 z-0 heroGradient" />
+          <div
+            ref={containerRef}
+            className="relative top-0 w-full h-screen flex items-center justify-center z-10 bg-transparent"
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+          >
+            <h1 className="logo">Athena Ventura</h1>
+            <div className="hero-image image-1">
+              <Image src="/cricklo_mockup_2.png" alt="" width={800} height={800} />
+            </div>
+            <div className="hero-image image-2">
+              <Image src="/soho_website_image.png" alt="" width={800} height={800} />
+            </div>
+            <div className="hero-image image-3">
+              <Image src="/helios_website_image.png" alt="" width={800} height={800} />
+            </div>
+            <div className="hero-image image-4">
+              <Image src="/bettersplit_image.png" alt="" width={800} height={800} />
+            </div>
+            <p className="hero-para para-1">
+              Good design  starts with thinking outside the box. In some cases, it’s the layout box we are talking about.
+            </p>
+            <p className="hero-para para-2">
+              Two Co-Founders curating designs and software from ideation to production.
+            </p>
+          
+          </div> 
         </div>
-       </section>
-       <section id="the-company">
+      </section>
+      <section id="what-we-do">
         <div data-theme="inverted">
-          <TheCompany />
+          <WhatWeDo />
         </div>
-       </section>
-       <section id="what-we-offer">
-        <div data-theme="default">
-          <WhatWeOffer />
-        </div>
-       </section>
-       <section id="reach-out">
-        <div data-theme="default">
-          <ReachOutToUs />
-        </div>  
-       </section>
+      </section>
+      <section id="what-we-did">
+      <div data-theme="default">
+        <WhatWeDid />
+      </div>
+      </section>
+      <section id="the-company">
+      <div data-theme="inverted">
+        <TheCompany />
+      </div>
+      </section>
+      <section id="what-we-offer">
+      <div data-theme="default">
+        <WhatWeOffer />
+      </div>
+      </section>
+      <section id="reach-out">
+      <div data-theme="default">
+        <ReachOutToUs />
+      </div>  
+      </section>
     </div>
   )
 }

@@ -47,7 +47,7 @@ export default function NavBar() {
   return (
     <div className={`${styles.navbar} ${theme === 'inverted' ? styles.navbar_inverted : ''}`}>
       <div className={`${styles.overlay} ${hovered ? styles.overlay_visible : ''}`} />
-      <Image className={styles.logo} src="/logo_white.svg" alt="My Logo" width={36} height={100} />
+      <Image className={styles.logo} src="/logo_white.svg" alt="My Logo" width={36} height={100} onClick={() => scrollToSection("home")} />
       
       <div
         className={styles.menu}
@@ -56,7 +56,6 @@ export default function NavBar() {
       >
         {menuItems.map((item) => {
           const isActive = activeSection === item.id
-          console.log(hovered)
           console.log(isActive)
           return (
             <div
