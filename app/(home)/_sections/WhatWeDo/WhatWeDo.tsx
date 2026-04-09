@@ -49,8 +49,7 @@ export default function WhatWeDo() {
                 ]}/>
             </div>
         </div>
-        
-        <div className='h-80'/>
+    
     </div>
   )
 }
