@@ -9,6 +9,13 @@ export default function Cta() {
   const [lastScrollY, setLastScrollY] = useState(0)
   const theme = useTheme()
 
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY
@@ -42,7 +49,7 @@ export default function Cta() {
         >
           <span>Get a Free Idea Consultancy</span>
         </button>
-        <button className={styles.btn_primary} data-text="Book a call">
+        <button className={styles.btn_primary} data-text="Book a call" onClick={() => scrollToSection("reach-out")}>
           <span>Book a call</span>
         </button>
       </div>

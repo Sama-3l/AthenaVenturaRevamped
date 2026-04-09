@@ -64,22 +64,31 @@ export default function Home() {
         
         </div> 
       </div>
-       
-       <div data-theme="inverted">
-        <WhatWeDo />
-       </div>
-       <div data-theme="default">
-        <WhatWeDid />
-       </div>
-       <div data-theme="inverted">
-        <TheCompany />
-       </div>
-       <div data-theme="default">
-        <WhatWeOffer />
-       </div>
-       <div data-theme="default">
-        <ReachOutToUs />
-       </div>   
+       <section id="what-we-do">
+          <div data-theme="inverted">
+            <WhatWeDo />
+          </div>
+       </section>
+       <section id="what-we-did">
+        <div data-theme="default">
+          <WhatWeDid />
+        </div>
+       </section>
+       <section id="the-company">
+        <div data-theme="inverted">
+          <TheCompany />
+        </div>
+       </section>
+       <section id="what-we-offer">
+        <div data-theme="default">
+          <WhatWeOffer />
+        </div>
+       </section>
+       <section id="reach-out">
+        <div data-theme="default">
+          <ReachOutToUs />
+        </div>  
+       </section>
     </div>
   )
 }

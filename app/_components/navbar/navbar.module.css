@@ -3,19 +3,21 @@
   right: 0;
   top: 0;
   bottom: 0;
-  padding: 32px;
   display: flex;
   z-index: 100;
   flex-direction: column;
+  pointer-events: none; 
+  justify-content: center;
 }
 
 .menu {
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 32px;
+  padding-right: 32px;
   align-items: flex-end;
+  z-index: 100;
   width: 10vw;
 }
 
@@ -53,7 +55,6 @@
   transform: translateX(0);
 }
 
-/* Small dot shown by default */
 .dot {
   width: 6px;
   height: 6px;
@@ -64,8 +65,10 @@
   transform: translateX(0);
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
               opacity 0.4s ease,
+              width 0.3s ease,
+              height 0.3s ease,
               background-color 0.5s ease;  
-  animation: pulse 3s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  /* animation: pulse 3s cubic-bezier(0.45, 0, 0.55, 1) infinite; */
 }
 
 .dot_hidden {
@@ -74,9 +77,9 @@
   animation: none;
 }
 
-/* Stop pulsing once user discovers the menu */
-.menu:hover .dot {
-  transform: translateX(40px); /* ✅ slides off to the right */
+/* Only hide non-active dots on hover */
+.menu:hover .dot:not(.dot_active) {
+  transform: translateX(40px);
   opacity: 0;
   animation: none;
 }
@@ -84,23 +87,27 @@
 .menu:hover .text {
   opacity: 1;
   width: auto;
-  transform: translateX(0); /* ✅ slides in from right */
+  transform: translateX(0);
 }
 
 .menu_item:hover .text {
   font-weight: 400;
 }
 
-@keyframes pulse {
+/* @keyframes pulse {
   0%, 100% { opacity: 1; transform: scale(1); }
   50%       { opacity: 0.3; transform: scale(0.7); }
-}
+} */
 
 .logo {
   position: absolute;
+  top: 0;
   right: 0;
   margin-right: 32px;
+  padding-top: 32px;
+  z-index: 100;
   transition: filter 0.5s ease;
+  cursor: pointer;
 }
 
 .navbar_inverted .logo {
@@ -113,4 +120,55 @@
 
 .navbar_inverted .dot {
   background-color: var(--color-background);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(6px);
+  z-index: 50;
+}
+
+.overlay_visible {
+  opacity: 1;
+}
+
+.navbar_inverted .overlay {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.menu,
+.menu_item,
+.logo {
+  pointer-events: auto;
+}
+
+/* Bold active text */
+.menu_item.active .text {
+  font-weight: 700;
+}
+
+/* Active dot: bigger + no blink.
+   Using .menu_item.active .dot gives higher specificity than .dot alone,
+   which is what was losing to the base .dot animation. */
+.menu_item.active .dot {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  transform: translateX(0);
+  animation: none;
+}
+
+/* Keep active dot visible and big when menu is hovered —
+   overrides .menu:hover .dot:not(.dot_active) for the active item */
+.menu:hover .menu_item.active .dot {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  transform: translateX(0);
+  animation: none;
 }
