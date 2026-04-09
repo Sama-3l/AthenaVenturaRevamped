@@ -56,7 +56,6 @@ export default function NavBar() {
       >
         {menuItems.map((item) => {
           const isActive = activeSection === item.id
-          console.log(isActive)
           return (
             <div
               key={item.id}

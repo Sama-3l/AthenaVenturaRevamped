@@ -7,6 +7,7 @@ import WhatWeDid from "./_sections/WhatWeDid/WhatWeDid";
 import TheCompany from "./_sections/TheCompany/TheCompany";
 import WhatWeOffer from "./_sections/WhatWeOffer/WhatWeOffer";
 import ReachOutToUs from "./_sections/ReachOutToUs/ReachOutToUs";
+import { GradienBackground } from "../_components/gradient_background";
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -36,7 +37,8 @@ export default function Home() {
     <div className="flex flex-col">
       <section id="home" >
         <div className="relative h-[150vh] bg-transparent">
-          <div className="absolute inset-0 z-0 heroGradient" />
+          {/* <div className="absolute inset-0 z-0 heroGradient" /> */}
+          <GradienBackground />          
           <div
             ref={containerRef}
             className="relative top-0 w-full h-screen flex items-center justify-center z-10 bg-transparent"
@@ -62,8 +64,10 @@ export default function Home() {
             <p className="hero-para para-2">
               Two Co-Founders curating designs and software from ideation to production.
             </p>
-          
           </div> 
+          <div className="relative h-full bg-transparent">
+
+          </div>
         </div>
       </section>
       <section id="what-we-do">
