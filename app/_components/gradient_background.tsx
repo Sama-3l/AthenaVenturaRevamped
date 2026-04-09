@@ -9,9 +9,6 @@ export function GradienBackground() {
     >
       <ShaderGradient
         animate="on"
-        axesHelper="off"
-        bgColor1="#000000"
-        bgColor2="#000000"
         brightness={1}
         cAzimuthAngle={270}
         cDistance={0.5}
@@ -20,16 +17,9 @@ export function GradienBackground() {
         color1="#1c1c1c"
         color2="#E33E3C"
         color3="#1c1c1c"
-        destination="onCanvas"
-        embedMode="off"
         envPreset="city"
-        format="gif"
-        fov={45}
-        frameRate={10}
-        gizmoHelper="hide"
         grain="on"
         lightType="env"
-        pixelDensity={1}
         positionX={-0.1}
         positionY={0}
         positionZ={0}
