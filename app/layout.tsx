@@ -61,10 +61,12 @@ export default function RootLayout({
       lang="en"
       className={`${ibaraRegular.variable} ${ibaraItalic.variable} ${fustat.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full  flex flex-col">
         <ThemeProvider>
           <main>
           {children}
+          <div className="fixed h-screen w-full"
+          ></div>
           <Footer />
           </main>
           <Cta />

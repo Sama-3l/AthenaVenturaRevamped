@@ -125,3 +125,82 @@ h1.logo {
   width: 20vw;
   transform: translateY(8px);
 }
+
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: var(--background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-bar {
+  position: absolute;
+  width: 200px;
+  height: 2px;
+  background: #333;
+}
+
+.loading-fill {
+  height: 100%;
+  background: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+/* ── Tablet (max 1024px) ── */
+@media (max-width: 1024px) {
+  h1.logo {
+    font-size: 12vw;
+  }
+
+  .hero-image {
+    width: 26vw;
+  }
+
+  .hero-image.image-1 {
+    top: 15%;
+    left: 6%;
+  }
+
+  .hero-image.image-2 {
+    top: 3%;
+    right: 10%;
+  }
+
+  .hero-image.image-3 {
+    top: 52%;
+    left: 15%;
+  }
+
+  .hero-image.image-4 {
+    bottom: 15%;
+    right: 10%;
+  }
+
+  .hero-para {
+    font-size: 16px;
+    width: 300px;
+  }
+
+  .hero-para.para-1 {
+    top: 26%;
+    left: 58%;
+  }
+
+  .hero-para.para-2 {
+    bottom: 12%;
+    left: 25%;
+  }
+
+  .page-title {
+    font-size: 6vw;
+    line-height: 3vw;
+  }
+
+  .page-subtitle {
+    width: 30vw;
+  }
+}

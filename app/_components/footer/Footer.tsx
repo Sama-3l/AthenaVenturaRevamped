@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <div className='flex flex-col gap-12 pt-75 px-12'>
+    <div className='flex flex-col lg:gap-12 lg:pt-75 lg:px-12 gap-6 pt-25 px-4'>
         <h2 className={styles.footer_logo}>Athena Ventura</h2>
         <div className='flex flex-row justify-between'>
             <Link href="https://www.instagram.com/athenaventur/" target="_blank" rel="noopener noreferrer">
@@ -20,17 +20,17 @@ export default function Footer() {
         </div>
         <div className='flex flex-row justify-between items-end pb-4'>
             <div className='flex flex-col gap-4'>
-                <p className='font-(family-name:--font-ibarra-italic) text-[16px] opacity-60 tracking-[-0.5%]'>
+                <p className='font-(family-name:--font-ibarra-italic) md:text-[16px] text-[8px] opacity-60 tracking-[-0.5%]'>
                     (In a good way ofc)
                 </p>
-                <p className='font-(family-name:--font-fustat) text-[16px] tracking-[-0.5%]'>
+                <p className='font-(family-name:--font-fustat) md:text-[16px] text-[8px] tracking-[-0.5%]'>
                     Once you have worked with us, you<br />wouldn’t want to work with anyone else.
                 </p>
             </div>
-            <p className='font-(family-name:--font-fustat) text-[16px] tracking-[-0.5%]'>
+            <p className='font-(family-name:--font-fustat) md:text-[16px] text-[8px] tracking-[-0.5%]'>
                 athenaventura@gmail.com
             </p>
-            <p className='font-(family-name:--font-fustat) text-[16px] tracking-[-0.5%]'>
+            <p className='font-(family-name:--font-fustat) md:text-[16px] text-[8px] tracking-[-0.5%]'>
                 © 2026 Athena Ventura
             </p>
         </div>

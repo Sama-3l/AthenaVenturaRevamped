@@ -1,13 +1,14 @@
 'use client'
 
 import Image from "next/image";
-import { useRef } from "react";
+import { useState, useEffect, useCallback, useRef } from 'react'
 import WhatWeDo from "./_sections/WhatWeDo/WhatWeDo";
 import WhatWeDid from "./_sections/WhatWeDid/WhatWeDid";
 import TheCompany from "./_sections/TheCompany/TheCompany";
 import WhatWeOffer from "./_sections/WhatWeOffer/WhatWeOffer";
 import ReachOutToUs from "./_sections/ReachOutToUs/ReachOutToUs";
 import { GradienBackground } from "../_components/gradient_background";
+import { LoadingScreen } from "../_components/loading/Loading";
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -26,6 +27,8 @@ export default function Home() {
     })
   }
 
+  
+
   const handleMouseLeave = () => {
     const images = containerRef.current?.querySelectorAll<HTMLElement>('.hero-image')
     images?.forEach((img) => {
@@ -33,68 +36,93 @@ export default function Home() {
     })
   }
 
-  return (
-    <div className="flex flex-col">
-      <section id="home" >
-        <div className="relative h-[150vh] bg-transparent">
-          {/* <div className="absolute inset-0 z-0 heroGradient" /> */}
-          <GradienBackground />          
-          <div
-            ref={containerRef}
-            className="relative top-0 w-full h-screen flex items-center justify-center z-10 bg-transparent"
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
-          >
-            <h1 className="logo">Athena Ventura</h1>
-            <div className="hero-image image-1">
-              <Image src="/cricklo_mockup_2.png" alt="" width={800} height={800} />
-            </div>
-            <div className="hero-image image-2">
-              <Image src="/soho_website_image.png" alt="" width={800} height={800} />
-            </div>
-            <div className="hero-image image-3">
-              <Image src="/helios_website_image.png" alt="" width={800} height={800} />
-            </div>
-            <div className="hero-image image-4">
-              <Image src="/bettersplit_image.png" alt="" width={800} height={800} />
-            </div>
-            <p className="hero-para para-1">
-              Good design  starts with thinking outside the box. In some cases, it’s the layout box we are talking about.
-            </p>
-            <p className="hero-para para-2">
-              Two Co-Founders curating designs and software from ideation to production.
-            </p>
-          </div> 
-          <div className="relative h-full bg-transparent">
+  const [loaded, setLoaded] = useState(true)
+  const [gradientLoaded, setGradientLoaded] = useState(false)
 
+  const handleComplete = useCallback(() => {
+    setLoaded(true)
+  }, [])
+
+  // useEffect(() => {
+  //   if (!loaded) {
+  //     document.body.style.overflow = 'hidden'
+  //   } else {
+  //     document.body.style.overflow = ''
+  //   }
+
+  //   return () => {
+  //     document.body.style.overflow = ''
+  //   }
+  // }, [loaded])
+
+  const handleGradientLoad = useCallback(() => setGradientLoaded(true), [])
+
+  return (
+    <div className="w-full">
+      {/* {!loaded && <LoadingScreen onComplete={handleComplete} gradientLoaded={gradientLoaded}/>} */}
+      <div style={{ visibility: loaded ? 'visible' : 'hidden' }}>
+        <div className="flex flex-col">
+          <section id="home" >
+            <div className="relative h-[150vh] ">
+              <GradienBackground />          
+              <div
+                ref={containerRef}
+                className="hero-container relative top-0 w-full h-screen flex items-center justify-center z-10 bg-transparent"
+                onMouseMove={handleMouseMove}
+                onMouseLeave={handleMouseLeave}
+              >
+                <h1 className="logo">Athena Ventura</h1>
+                <div className="hero-image image-1">
+                  <Image src="/cricklo_mockup_2.png" alt="" width={800} height={800} />
+                </div>
+                <div className="hero-image image-2">
+                  <Image src="/soho_website_image.png" alt="" width={800} height={800} />
+                </div>
+                <div className="hero-image image-3">
+                  <Image src="/helios_website_image.png" alt="" width={800} height={800} />
+                </div>
+                <div className="hero-image image-4">
+                  <Image src="/bettersplit_image.png" alt="" width={800} height={800} />
+                </div>
+                <p className="hero-para para-1">
+                  Great design starts with thinking outside the box. In some cases, it’s the layout box that we are talking about.
+                </p>
+                <p className="hero-para para-2">
+                  Two Co-Founders curating designs and software from ideation to production.
+                </p>
+              </div> 
+              <div className="relative h-full bg-transparent">
+
+              </div>
+            </div>
+          </section>
+          <section id="what-we-do">
+            <div data-theme="inverted">
+              <WhatWeDo />
+            </div>
+          </section>
+          <section id="what-we-did">
+          <div data-theme="default">
+            <WhatWeDid />
           </div>
+          </section>
+          <section id="the-company">
+          <div data-theme="inverted">
+            <TheCompany />
+          </div>
+          </section>
+          <section id="what-we-offer">
+          <div data-theme="default">
+            <WhatWeOffer />
+          </div>
+          </section>
+          <section id="reach-out">
+          <div data-theme="default">
+            <ReachOutToUs />
+          </div>  
+          </section>
         </div>
-      </section>
-      <section id="what-we-do">
-        <div data-theme="inverted">
-          <WhatWeDo />
-        </div>
-      </section>
-      <section id="what-we-did">
-      <div data-theme="default">
-        <WhatWeDid />
       </div>
-      </section>
-      <section id="the-company">
-      <div data-theme="inverted">
-        <TheCompany />
-      </div>
-      </section>
-      <section id="what-we-offer">
-      <div data-theme="default">
-        <WhatWeOffer />
-      </div>
-      </section>
-      <section id="reach-out">
-      <div data-theme="default">
-        <ReachOutToUs />
-      </div>  
-      </section>
     </div>
   )
 }

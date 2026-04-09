@@ -2,6 +2,18 @@
     font-family: var(--font-ibarra-italic);
     font-weight: 800;
     color: var(--color-foreground);
-    font-size: 13.85vw;
-    line-height: 13.85vw;
+    font-size: 14vw;
+    line-height: 14vw;
+    white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+    .footer_logo{
+        font-family: var(--font-ibarra-italic);
+        font-weight: 800;
+        color: var(--color-foreground);
+        font-size: 14.35vw;
+        line-height: 14.35vw;
+        white-space: nowrap;
+    }
 }

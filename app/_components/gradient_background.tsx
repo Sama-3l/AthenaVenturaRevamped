@@ -1,6 +1,28 @@
 import { ShaderGradientCanvas, ShaderGradient } from '@shadergradient/react'
+import { useFrame } from '@react-three/fiber'
+import { useRef, useEffect } from 'react'
 
-export function GradienBackground() {
+function GradientReadyDetector({ onReady }: { onReady: () => void }) {
+  const called = useRef(false)
+
+  useFrame(() => {
+    if (!called.current) {
+      called.current = true
+      onReady()
+    }
+  })
+
+  return null
+}
+
+export function GradienBackground({ onLoad }: { onLoad?: () => void }) {
+    useEffect(() => {
+    const timer = setTimeout(() => {
+      onLoad?.()
+    }, 1500) // give the WebGL context 1.5s to initialize
+
+    return () => clearTimeout(timer)
+  }, [onLoad])
   return (
     <ShaderGradientCanvas
       style={{ position: 'fixed', inset: 0, zIndex: -1 }}
