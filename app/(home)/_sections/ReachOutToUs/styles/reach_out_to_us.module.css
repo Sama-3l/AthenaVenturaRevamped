@@ -12,3 +12,20 @@
     font-size: 16px;
     line-height: 150%;
 }
+
+@media (max-width: 640px) {
+    .page_title{
+        font-family: var(--font-ibarra-italic);
+        color: var(--color-foreground);
+        font-size: 24px;
+        line-height: 24px;
+        letter-spacing: -5%;
+    }
+
+    .page_body {
+        font-family: var(--font-fustat);
+        color: var(--color-foreground);
+        font-size: 12px;
+        line-height: 150%;
+    }
+}

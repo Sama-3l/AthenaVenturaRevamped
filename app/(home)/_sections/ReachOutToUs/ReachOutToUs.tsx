@@ -10,7 +10,7 @@ export default function ReachOutToUs() {
         <PageHeader title='Reach out to us' className = "text-(--color-foreground) border-(--color-foreground)"/>
         
         <div className='flex flex-row md:flex-nowrap gap-8 flex-wrap py-12'>
-            <div className='flex flex-col gap-8'>
+            <div className='flex flex-row w-full md:w-auto justify-between items-start md:justify-normal md:flex-col gap-8'>
                 <div className='px-6'>
                     <h2 className={styles.page_title}>
                         Work with us
