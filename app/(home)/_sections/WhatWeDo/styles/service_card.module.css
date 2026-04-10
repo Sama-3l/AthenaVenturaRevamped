@@ -100,3 +100,28 @@
     border-right: none;
   }
 }
+
+@media (hover: none) {
+    .gradient_overlay {
+        display: none;
+    }
+
+    :global(.group:hover) .service_title,
+    :global(.group:hover) .service_number,
+    :global(.group:hover) .service_body,
+    :global(.group:hover) .cta {
+        color: var(--color-background);
+    }
+
+    :global(.group:hover) .bullet_dot {
+        background-color: var(--color-background);
+    }
+
+    :global(.group:hover) .arrow path {
+        fill: var(--color-background);
+    }
+
+    :global(.group:hover) .arrow {
+        transform: none;
+    }
+}

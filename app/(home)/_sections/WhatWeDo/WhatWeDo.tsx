@@ -6,8 +6,9 @@ export default function WhatWeDo() {
   return (
     <div className="flex flex-col">
         <div className='bg-(--color-foreground)'>
-
-            <PageHeader title="What we do" subtitle='We have a lot to offer so choose what you’ll like us to do and combinations are obviously very welcome.  '/>
+            <div className='sm:border-r-2 border-(--color-background)'>
+                <PageHeader title="What we do" subtitle='We have a lot to offer so choose what you’ll like us to do and combinations are obviously very welcome.  '/>
+            </div>
             <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
                 <ServiceCard id={1} title={'Brand\nDesign'} subtitle={'We craft identities that don’t just look good—they feel intentional, memorable, and built for digital products. Every brand we design is made to live seamlessly across interfaces and experiences.'} bullets={[
                     "Logo, typography, color systems",

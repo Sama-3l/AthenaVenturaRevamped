@@ -1,8 +1,8 @@
 "use client"
-import React from 'react'
+import { useState} from 'react'
 import styles from '../styles/service_card.module.css';
 
-export default function ServiceCard({id, title, subtitle, bullets} : {id : number, title: string, subtitle : string, bullets: string[]}) {
+export default function ServiceCard({id, title, subtitle, bullets, className = "sm:border-r-2"} : {id : number, title: string, subtitle : string, bullets: string[], className?: string}) {
     const isLastInRow = id % 3 === 0;
     const scrollToSection = (id: string) => {
         const el = document.getElementById(id)
@@ -10,16 +10,17 @@ export default function ServiceCard({id, title, subtitle, bullets} : {id : numbe
         el.scrollIntoView({ behavior: 'smooth' })
         }
     }
+
     return (
         <div className='group w-full h-[80vh] flex flex-col justify-between relative overflow-hidden'>
             
             {/* Gradient overlay - slides up from bottom */}
-            <div 
-                className='absolute inset-0 translate-y-full group-hover:translate-y-0 transition-transform duration-350 pointer-events-none'
+            <div
+                className={`absolute inset-0 translate-y-full group-hover:translate-y-0 transition-transform duration-350 pointer-events-none ${styles.gradient_overlay}`}
                 style={{ background: 'linear-gradient(to top, #E33E3C 0%, #1C1C1C 100%)' }}
             />
 
-            <div className={`relative z-10 flex h-full flex-col px-5 border-(--color-background) border-r-2 justify-between`}>
+            <div className={`relative z-10 flex h-full flex-col px-5 border-(--color-background) ${className} justify-between`}>
                 <div className='flex flex-col gap-10'>
                     <div className='flex flex-col pt-6 gap-2'>
                         <p className={styles.service_number}> 
