@@ -1,35 +1,48 @@
 import { ShaderGradientCanvas, ShaderGradient } from '@shadergradient/react'
-import { useFrame } from '@react-three/fiber'
-import { useRef, useEffect} from 'react'
-
-function GradientReadyDetector({ onReady }: { onReady: () => void }) {
-  const called = useRef(false)
-
-  useFrame(() => {
-    if (!called.current) {
-      called.current = true
-      onReady()
-    }
-  })
-
-  return null
-}
+import { useRef, useEffect, useState } from 'react'
 
 export function GradienBackground({ onLoad }: { onLoad?: () => void }) {
-    useEffect(() => {
+  const [isLowEnd, setIsLowEnd] = useState(false)
+
+  useEffect(() => {
+    let frames = 0
+    const start = performance.now()
+
+    const check = () => {
+      frames++
+      const elapsed = performance.now() - start
+      if (elapsed >= 500) {
+        if ((frames / elapsed) * 1000 < 40) setIsLowEnd(true)
+        return
+      }
+      requestAnimationFrame(check)
+    }
+
+    requestAnimationFrame(check)
+  }, [])
+
+  useEffect(() => {
     const timer = setTimeout(() => {
       onLoad?.()
-    }, 1500) // give the WebGL context 1.5s to initialize
-
+    }, 1500)
     return () => clearTimeout(timer)
   }, [onLoad])
 
   const isMobile = typeof window !== 'undefined' && window.innerWidth <= 640
-  
+
+  if (isLowEnd) {
+    return (
+      <div style={{
+        position: 'fixed', inset: 0, zIndex: -1,
+        background: 'var(--color-background)'
+      }} />
+    )
+  }
+
   return (
     <ShaderGradientCanvas
       style={{ position: 'fixed', inset: 0, zIndex: -1 }}
-      pixelDensity={1.5}      
+      pixelDensity={isMobile ? 1 : 1.5}
       fov={45}
     >
       <ShaderGradient
@@ -43,7 +56,7 @@ export function GradienBackground({ onLoad }: { onLoad?: () => void }) {
         color2="#E33E3C"
         color3="#1c1c1c"
         envPreset="city"
-        grain="on"
+        grain={isMobile ? "off" : "on"}
         lightType="env"
         positionX={-0.1}
         positionY={0}
@@ -64,7 +77,7 @@ export function GradienBackground({ onLoad }: { onLoad?: () => void }) {
         uStrength={0.3}
         uTime={0}
         wireframe={false}
-        />
+      />
     </ShaderGradientCanvas>
   )
 }
