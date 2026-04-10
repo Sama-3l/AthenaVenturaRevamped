@@ -18,7 +18,6 @@ interface WorkCardProps {
 
 export default function WorkCard({ title, subtitle, body, images, tags, backgroundColor = 'var(--color-background)', textColor = 'var(--color-foreground)', tagTextColor = 'var(--color-background)', tagBackgroundColor = 'var(--color-foreground)' }: WorkCardProps) {
 
-
   return (
     <div
       className={styles.card}

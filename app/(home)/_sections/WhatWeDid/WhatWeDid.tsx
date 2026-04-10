@@ -46,7 +46,7 @@ export default function WhatWeDid() {
     <div className='flex flex-col'>
       <WorkCard
         title="Oruphones"
-        subtitle={<>Marketplace for <br/>old, refurbished and used phones</>}
+        subtitle={"Marketplace for old, refurbished and used phones"}
         body="Siddhartha worked with them on feature development and a lot of bug maintenance on their Flutter application. Weekly sprints, review system development, managing the App and Play Store releases, etc."
         tags={["Retainer", "Maintenance", "Feature Development"]}
         images={["/Oruphones/oruphones_1.png", "/Oruphones/oruphones_2.png", "/Oruphones/oruphones_3.png", "/Oruphones/oruphones_4.png"]}

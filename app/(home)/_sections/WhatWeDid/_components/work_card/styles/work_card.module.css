@@ -42,6 +42,7 @@
   font-family: var(--font-ibarra-italic);
   font-size: 40px;
   line-height: 1;
+  width: 40vw;
   letter-spacing: -5%;
 }
 
@@ -135,7 +136,7 @@
   100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .card_top {
     padding: 24px 24px;
     display: flex;
@@ -147,6 +148,7 @@
     font-family: var(--font-ibarra-italic);
     font-size: 32px;
     line-height: 1;
+    width: 60vw;
     letter-spacing: -5%;
   }
 
@@ -175,3 +177,46 @@
     gap: 24px;
   }
 }
+
+@media (max-width: 768px) {
+  .card_top {
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .title_line {
+    font-family: var(--font-ibarra-italic);
+    font-size: 24px;
+    line-height: 1;
+    width: 80vw;
+    letter-spacing: -5%;
+  }
+
+  .body_text {
+    font-family: var(--font-fustat);
+    font-size: 10px;
+    line-height: 1.6;
+    width: auto;
+    flex-shrink: 0;
+  }
+
+  .tag {
+    font-family: var(--font-fustat);
+    font-size: 8px;
+    letter-spacing: -2.5%;
+    border-radius: 4px;
+    line-height: 125%;
+    padding: 6px 10px;
+  }
+  
+  .content_row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+  }
+}
+
