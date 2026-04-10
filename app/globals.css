@@ -251,6 +251,7 @@ h1.logo {
   .hero-para.para-1 {
     top: 35%;
     left: 15%;
+    width: 250px;
   }
 
   .hero-para.para-2 {
