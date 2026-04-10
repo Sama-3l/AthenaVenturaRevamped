@@ -19,7 +19,7 @@
 
 /* TOP PHOTO - tilted left, lands second */
 .photo_top {
-  bottom: 45%;
+  bottom: 70%;
   transform: translateY(120vh) rotate(-4deg);
   transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.18s;
   z-index: 2;
@@ -32,7 +32,7 @@
 /* BOTTOM PHOTO - tilted right, its top-left corner is under photo1's bottom-right */
 .photo_bottom {
   left: 22%;  /* shift right so top-left sits under photo1's bottom-right */
-  bottom: 15%;                 /* sit lower than top photo */
+  bottom: 35%;                 /* sit lower than top photo */
   transform: translateY(120vh) rotate(4deg);
   transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
   z-index: 1;
