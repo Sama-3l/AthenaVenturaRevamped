@@ -10,9 +10,11 @@ export function GradienBackground({ onLoad }: { onLoad?: () => void }) {
 
     const check = () => {
       frames++
+      console.log(frames);
       const elapsed = performance.now() - start
+      console.log(elapsed);
       if (elapsed >= 500) {
-        if ((frames / elapsed) * 1000 < 40) setIsLowEnd(true)
+        if ((frames / elapsed) * 1000 < 10) setIsLowEnd(true)
         return
       }
       requestAnimationFrame(check)
@@ -29,7 +31,6 @@ export function GradienBackground({ onLoad }: { onLoad?: () => void }) {
   }, [onLoad])
 
   const isMobile = typeof window !== 'undefined' && window.innerWidth <= 640
-
   if (isLowEnd) {
     return (
       <div style={{
