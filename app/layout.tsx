@@ -34,7 +34,7 @@ const fustat = localFont({
 
 export const metadata: Metadata = {
   title: "Athena Ventura",
-  description: "Athena Ventura is a UI/UX design studio focused on creating high-quality user experiences for web and mobile applications. We help startups and businesses design user-centric software, improve product usability, and build scalable digital experiences through research-driven design, intuitive interfaces, and modern design systems.",
+  description: "Money problems? Organizing problems? OCD about managing your things? We can build a software for that!! Do reach out, love you.",
   icons: {
     icon: [
       {
@@ -48,6 +48,28 @@ export const metadata: Metadata = {
         href: '/favicon/black_on_white_favicon.png',
       },
     ],
+  },
+  openGraph: {
+    title: "Athena Ventura",
+    description: "Two friends. One studio. We design and build digital products we're genuinely proud of, from brand identity and UI/UX to full-stack web and mobile apps. Professional work, human approach.",
+    url: "https://athenaventura.com",
+    siteName: "Athena Ventura",
+    images: [
+      {
+        url: "/metadata_image.png",
+        width: 1200,
+        height: 630,
+        alt: "Athena Ventura - UI/UX Design Studio",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Athena Ventura",
+    description: "Two friends. One studio. We design and build digital products we're genuinely proud of, from brand identity and UI/UX to full-stack web and mobile apps. Professional work, human approach.",
+    images: ["/metadata_image.png"],
   },
 };
 
