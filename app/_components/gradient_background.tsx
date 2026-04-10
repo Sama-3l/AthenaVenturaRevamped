@@ -1,6 +1,6 @@
 import { ShaderGradientCanvas, ShaderGradient } from '@shadergradient/react'
 import { useFrame } from '@react-three/fiber'
-import { useRef, useEffect, useState } from 'react'
+import { useRef, useEffect} from 'react'
 
 function GradientReadyDetector({ onReady }: { onReady: () => void }) {
   const called = useRef(false)
@@ -24,18 +24,6 @@ export function GradienBackground({ onLoad }: { onLoad?: () => void }) {
     return () => clearTimeout(timer)
   }, [onLoad])
 
-  const [cameraZoom, setCameraZoom] = useState(
-    typeof window !== 'undefined' && window.innerWidth <= 640 ? 9 : 15.1
-  )
-
-  useEffect(() => {
-    const handleResize = () => {
-      setCameraZoom(window.innerWidth <= 640 ? 10 : 15.1)
-    }
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
-
   return (
     <ShaderGradientCanvas
       style={{ position: 'fixed', inset: 0, zIndex: -1 }}
@@ -48,7 +36,7 @@ export function GradienBackground({ onLoad }: { onLoad?: () => void }) {
         cAzimuthAngle={270}
         cDistance={0.5}
         cPolarAngle={180}
-        cameraZoom={cameraZoom}
+        cameraZoom={15.1}
         color1="#1c1c1c"
         color2="#E33E3C"
         color3="#1c1c1c"
