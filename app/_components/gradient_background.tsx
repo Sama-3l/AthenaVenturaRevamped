@@ -2,18 +2,10 @@ import { ShaderGradientCanvas, ShaderGradient } from '@shadergradient/react'
 import { useEffect, useState } from 'react'
 
 export function GradienBackground({ onLoad }: { onLoad?: () => void }) {
-  const [isLowEnd, setIsLowEnd] = useState<boolean | null>(null)
+  const [isMobile, setIsMobile] = useState<boolean | null>(null)
 
   useEffect(() => {
-    const cores = navigator.hardwareConcurrency ?? 4
-    const memory = (navigator as any).deviceMemory ?? 4
-
-    const canvas = document.createElement('canvas')
-    const gl = canvas.getContext('webgl') as WebGLRenderingContext | null
-    const renderer = gl?.getParameter(gl.RENDERER) as string ?? ''
-    const isSoftwareRenderer = /swiftshader|llvmpipe|software/i.test(renderer)
-
-    setIsLowEnd(cores <= 6 || memory <= 2 || isSoftwareRenderer)
+    setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent))
   }, [])
 
   useEffect(() => {
@@ -23,9 +15,9 @@ export function GradienBackground({ onLoad }: { onLoad?: () => void }) {
     return () => clearTimeout(timer)
   }, [onLoad])
 
-  if (isLowEnd === null) return null
+  if (isMobile === null) return null
 
-  if (isLowEnd) {
+  if (isMobile) {
     return (
       <div style={{
         position: 'fixed', inset: 0, zIndex: -1,
