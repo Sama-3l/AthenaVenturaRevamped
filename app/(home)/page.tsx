@@ -100,12 +100,12 @@ export default function Home() {
             <div data-theme="inverted">
               <WhatWeDo />
             </div>
-          </section>
+          </section> */}
           <section id="what-we-did">
           <div data-theme="default">
             <WhatWeDid />
           </div>
-          </section> */}
+          </section>
           <section id="the-company">
           <div data-theme="inverted">
             <TheCompany />
