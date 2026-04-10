@@ -243,7 +243,8 @@ h1.logo {
   }
 
   .hero-para {
-    font-size: 16px;
+    font-size: 10px;
+    letter-spacing: -0.5%;
     width: 200px;
   }
 

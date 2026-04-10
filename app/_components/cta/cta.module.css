@@ -143,11 +143,13 @@
 @media (max-width: 640px) {
   .btn_outline {
     font-size: 12px;
+    letter-spacing: -2.5%;
     padding: 12px 24px;
   }
 
   .btn_primary {
     font-size: 12px;
+    letter-spacing: -2.5%;
     padding: 12px 24px;
   }
 
@@ -155,6 +157,8 @@
     position: absolute;
     bottom: 88px;
     left: 50%;
+    font-size: 12px;
+    letter-spacing: 0%;
     transform: translateX(-50%);
   }
 }
