@@ -136,10 +136,6 @@
   color: var(--color-background);
 }
 
-.cta_inverted .dot {
-  background-color: var(--color-background);
-}
-
 @media (max-width: 640px) {
   .cta_bar{
     padding: 24px;
