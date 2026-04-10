@@ -211,17 +211,17 @@ h1.logo {
   }
 
   .hero-image {
-    width: 32vw;
+    width: 40vw;
   }
 
   .hero-image.image-1 {
-    top: 15%;
+    top: 25%;
     left: 6%;
   }
 
   .hero-para{
     position: absolute;
-    width: 250px;
+    width: 150px;
     font-family: var(--font-fustat);
     letter-spacing: -5%;
     font-size: 12px;
@@ -234,11 +234,11 @@ h1.logo {
 
   .hero-image.image-3 {
     top: 52%;
-    left: 15%;
+    left: 5%;
   }
 
   .hero-image.image-4 {
-    bottom: 15%;
+    bottom: 25%;
     right: 10%;
   }
 
