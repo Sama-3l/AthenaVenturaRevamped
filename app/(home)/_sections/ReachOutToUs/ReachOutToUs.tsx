@@ -10,7 +10,7 @@ export default function ReachOutToUs() {
         <PageHeader title='Reach out to us' className = "text-(--color-foreground) border-(--color-foreground)"/>
         
         <div className='flex flex-row md:flex-nowrap gap-8 flex-wrap py-12'>
-            <div className='flex flex-row w-full md:w-auto justify-between items-start md:justify-normal md:flex-col gap-8'>
+            <div className='flex flex-col sm:flex-row w-full md:w-auto justify-between items-start md:justify-normal md:flex-col gap-8'>
                 <div className='px-6'>
                     <h2 className={styles.page_title}>
                         Work with us
@@ -31,13 +31,13 @@ export default function ReachOutToUs() {
             
         </div>
         <div className='flex flex-row md:flex-nowrap md:gap-0 flex-wrap pt-15 pb-12 gap-12'>
-            <div className='flex flex-col gap-8 '>
+            <div className='flex flex-col gap-8'>
                 <div className='px-6'>
                     <h2 className={styles.page_title}>
                         Contact Us
                     </h2>
                 </div>
-                <div className='flex flex-col gap-1 px-8 w-[70%] md:w-[90%] lg:w-[70%]'>
+                <div className='flex flex-col gap-1 px-6 w-[70%] md:w-[90%] lg:w-[70%]'>
                     <p className={styles.page_body}>
                     We are a small creative studio-cum-software development firm dedicated to launch of new ventures and transforming established brands. We curate captivating designs that lead our teams to bring your ideas and visions to life.<br /><br />Building brands, apps and websites our team is here to help you start, grow or elevate your enterprise.
                     </p>
