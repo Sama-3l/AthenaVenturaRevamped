@@ -30,7 +30,6 @@ export function GradienBackground({ onLoad }: { onLoad?: () => void }) {
     return () => clearTimeout(timer)
   }, [onLoad])
 
-  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 640
   if (isLowEnd) {
     return (
       <div style={{
@@ -43,7 +42,7 @@ export function GradienBackground({ onLoad }: { onLoad?: () => void }) {
   return (
     <ShaderGradientCanvas
       style={{ position: 'fixed', inset: 0, zIndex: -1 }}
-      pixelDensity={isMobile ? 1 : 1.5}
+      pixelDensity={1.5}
       fov={45}
     >
       <ShaderGradient
@@ -52,12 +51,12 @@ export function GradienBackground({ onLoad }: { onLoad?: () => void }) {
         cAzimuthAngle={270}
         cDistance={0.5}
         cPolarAngle={180}
-        cameraZoom={isMobile ? 9 : 15.1}
+        cameraZoom={15.1}
         color1="#1c1c1c"
         color2="#E33E3C"
         color3="#1c1c1c"
         envPreset="city"
-        grain={isMobile ? "off" : "on"}
+        grain={"on"}
         lightType="env"
         positionX={-0.1}
         positionY={0}
@@ -71,10 +70,10 @@ export function GradienBackground({ onLoad }: { onLoad?: () => void }) {
         rotationZ={70}
         shader="defaults"
         type="sphere"
-        uAmplitude={isMobile ? 1.5 : 3.2}
+        uAmplitude={3.2}
         uDensity={0.8}
-        uFrequency={isMobile ? 2.5 : 5.5}
-        uSpeed={isMobile ? 0.15 : 0.3}
+        uFrequency={5.5}
+        uSpeed={0.3}
         uStrength={0.3}
         uTime={0}
         wireframe={false}
