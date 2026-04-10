@@ -1,11 +1,15 @@
 import { ShaderGradientCanvas, ShaderGradient } from '@shadergradient/react'
 import { useEffect, useState } from 'react'
+import { getGPUTier } from 'detect-gpu'
 
 export function GradienBackground({ onLoad }: { onLoad?: () => void }) {
-  const [isMobile, setIsMobile] = useState<boolean | null>(null)
+  const [isLowEnd, setIsLowEnd] = useState<boolean | null>(null)
 
   useEffect(() => {
-    setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent))
+    getGPUTier().then((tier) => {
+      // tier 0 or 1 = struggling device, skip the shader
+      setIsLowEnd(tier.tier <= 1)
+    })
   }, [])
 
   useEffect(() => {
@@ -15,9 +19,9 @@ export function GradienBackground({ onLoad }: { onLoad?: () => void }) {
     return () => clearTimeout(timer)
   }, [onLoad])
 
-  if (isMobile === null) return null
+  if (isLowEnd === null) return null
 
-  if (isMobile) {
+  if (isLowEnd) {
     return (
       <div style={{
         position: 'fixed', inset: 0, zIndex: -1,
