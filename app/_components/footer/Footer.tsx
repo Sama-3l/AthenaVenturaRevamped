@@ -20,19 +20,27 @@ export default function Footer() {
         </div>
         <div className='flex flex-row justify-between items-end pb-4'>
             <div className='flex flex-col gap-4'>
-                <p className='font-(family-name:--font-ibarra-italic) md:text-[16px] text-[8px] opacity-60 tracking-[-0.5%]'>
+                <p className='font-(family-name:--font-ibarra-italic) md:text-[16px] text-[10px] opacity-60 tracking-[-0.5%]'>
                     (In a good way ofc)
                 </p>
-                <p className='font-(family-name:--font-fustat) md:text-[16px] text-[8px] tracking-[-0.5%]'>
-                    Once you have worked with us, you<br />wouldn’t want to work with anyone else.
+                <p className='font-(family-name:--font-fustat) md:text-[16px] text-[10px] tracking-[-0.5%]'>
+                    Once you have worked with us, you<br />wouldn't want to work with anyone else.
                 </p>
             </div>
-            <p className='font-(family-name:--font-fustat) md:text-[16px] text-[8px] tracking-[-0.5%]'>
+            <p className='font-(family-name:--font-fustat) md:text-[16px] text-[10px] tracking-[-0.5%] hidden sm:block'>
                 athenaventura@gmail.com
             </p>
-            <p className='font-(family-name:--font-fustat) md:text-[16px] text-[8px] tracking-[-0.5%]'>
+            <p className='font-(family-name:--font-fustat) md:text-[16px] text-[10px] tracking-[-0.5%] hidden sm:block'>
                 © 2026 Athena Ventura
             </p>
+            <div className='flex flex-col gap-4 sm:hidden items-end'>
+                <p className='font-(family-name:--font-fustat) md:text-[16px] text-[10px] tracking-[-0.5%]'>
+                    athenaventura@gmail.com
+                </p>
+                <p className='font-(family-name:--font-fustat) md:text-[16px] text-[10px] tracking-[-0.5%]'>
+                    © 2026 Athena Ventura
+                </p>
+            </div>
         </div>
     </div>
   )
