@@ -1,26 +1,20 @@
 import { ShaderGradientCanvas, ShaderGradient } from '@shadergradient/react'
-import { useRef, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export function GradienBackground({ onLoad }: { onLoad?: () => void }) {
   const [isLowEnd, setIsLowEnd] = useState(false)
 
   useEffect(() => {
-    let frames = 0
-    const start = performance.now()
+    const cores = navigator.hardwareConcurrency ?? 4
+    const memory = (navigator as any).deviceMemory ?? 4
 
-    const check = () => {
-      frames++
-      console.log(frames);
-      const elapsed = performance.now() - start
-      console.log(elapsed);
-      if (elapsed >= 500) {
-        if ((frames / elapsed) * 1000 < 10) setIsLowEnd(true)
-        return
-      }
-      requestAnimationFrame(check)
-    }
+    const canvas = document.createElement('canvas')
+    const gl = canvas.getContext('webgl') as WebGLRenderingContext | null
+    const renderer = gl?.getParameter(gl.RENDERER) as string ?? ''
+    const isSoftwareRenderer = /swiftshader|llvmpipe|software/i.test(renderer)
 
-    requestAnimationFrame(check)
+    const isLowEnd = cores <= 6 || memory <= 2 || isSoftwareRenderer
+    setIsLowEnd(isLowEnd)
   }, [])
 
   useEffect(() => {
@@ -56,7 +50,7 @@ export function GradienBackground({ onLoad }: { onLoad?: () => void }) {
         color2="#E33E3C"
         color3="#1c1c1c"
         envPreset="city"
-        grain={"on"}
+        grain="on"
         lightType="env"
         positionX={-0.1}
         positionY={0}
