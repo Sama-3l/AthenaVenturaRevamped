@@ -270,3 +270,9 @@ h1.logo {
     transform: translateY(0);
   }
 }
+
+@media (max-height: 728) {
+  .hero-image {
+    width: 30vw;
+  }
+}

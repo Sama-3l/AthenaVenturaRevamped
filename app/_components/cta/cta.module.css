@@ -141,6 +141,10 @@
 }
 
 @media (max-width: 640px) {
+  .cta_bar{
+    padding: 24px;
+  }
+
   .btn_outline {
     font-size: 10px;
     letter-spacing: -2.5%;
@@ -155,7 +159,7 @@
 
   .cta_note {
     position: absolute;
-    bottom: 88px;
+    bottom: 80px;
     left: 50%;
     font-size: 10px;
     letter-spacing: 0%;
