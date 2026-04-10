@@ -10,7 +10,7 @@ export default function PageHeader({
   className?: string
 }) {
   return (
-    <div className={`flex items-center justify-between px-8 pb-8 pt-12 border-b ${className}`}>
+    <div className={`flex items-center justify-between px-4 md:px-8 pb-8 pt-12 border-b ${className}`}>
         <h1 className="page-title">
         {title}
         </h1>
