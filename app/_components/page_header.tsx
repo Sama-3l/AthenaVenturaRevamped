@@ -16,7 +16,7 @@ export default function PageHeader({
         </h1>
         {
             subtitle && (
-                <p className="w-62.5 page-subtitle">
+                <p className="page-subtitle">
                 {subtitle}
                 </p>
             )

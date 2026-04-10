@@ -215,7 +215,7 @@ h1.logo {
   }
 
   .hero-image.image-1 {
-    top: 25%;
+    top: 15%;
     left: 6%;
   }
 
@@ -249,8 +249,8 @@ h1.logo {
   }
 
   .hero-para.para-1 {
-    top: 26%;
-    left: 50%;
+    top: 35%;
+    left: 15%;
   }
 
   .hero-para.para-2 {
@@ -264,6 +264,8 @@ h1.logo {
   }
 
   .page-subtitle {
-    width: 30vw;
+    width: 50vw;
+    font-size: 10px;
+    transform: translateY(0);
   }
 }
