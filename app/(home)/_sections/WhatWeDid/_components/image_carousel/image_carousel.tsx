@@ -56,6 +56,26 @@ export default function ImageCarousel({images} : {images : string[]}) {
     track.style.transform = `translateX(-${next}px)`
   }
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setIsDragging(true)
+    dragStart.current = { x: e.touches[0].clientX, scrollLeft: scrollPos.current }
+  }
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isDragging) return
+    const dx = e.touches[0].clientX - dragStart.current.x
+    const track = trackRef.current
+    if (!track) return
+    const half = track.scrollWidth / 2
+    let next = dragStart.current.scrollLeft - dx
+    if (next < 0) next = 0
+    if (next >= half) next = half - 1
+    scrollPos.current = next
+    track.style.transform = `translateX(-${next}px)`
+  }
+
+  const handleTouchEnd = () => setIsDragging(false)
+
   return (
     <div
       className={`w-full relative ${styles.carousel_container}`}
@@ -64,6 +84,9 @@ export default function ImageCarousel({images} : {images : string[]}) {
       onMouseMove={(e) => { handleMouseMove(e); handleMouseDrag(e) }}
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
     >
       {/* Custom cursor */}
       {hovered && (
@@ -78,12 +101,12 @@ export default function ImageCarousel({images} : {images : string[]}) {
       <div className={styles.image_carousel_track} ref={trackRef}>
         <div className={styles.image_set}>
           {images.map((image, index) => (
-            <Image key={index} src={image} height={300} width={300} alt="" unoptimized loading="eager" className="h-75 w-auto shrink-0 pointer-events-none" />
+            <Image key={index} src={image} height={300} width={300} alt="" unoptimized loading="eager" className="h-60 md:h-75 w-auto shrink-0 pointer-events-none" />
           ))}
         </div>
         <div className={styles.image_set}>
           {images.map((image, index) => (
-            <Image key={index} src={image} height={300} width={300} alt="" unoptimized loading="eager" className="h-75 w-auto shrink-0 pointer-events-none" />
+            <Image key={index} src={image} height={300} width={300} alt="" unoptimized loading="eager" className="h-60 md:h-75 w-auto shrink-0 pointer-events-none" />
           ))}
         </div>
       </div>

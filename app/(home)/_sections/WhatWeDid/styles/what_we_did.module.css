@@ -54,3 +54,11 @@
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+
+@media (max-width: 768px) {
+  .section {
+    height: 80svh;
+    /* background: linear-gradient(to bottom, #E33E3C 0%, #1C1C1C 100%); */
+  }
+
+}

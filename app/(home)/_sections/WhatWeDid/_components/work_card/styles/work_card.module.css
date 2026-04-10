@@ -134,3 +134,44 @@
   0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
   100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
 }
+
+@media (max-width: 768px) {
+  .card_top {
+    padding: 24px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .title_line {
+    font-family: var(--font-ibarra-italic);
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: -5%;
+  }
+
+  .body_text {
+    font-family: var(--font-fustat);
+    font-size: 12px;
+    line-height: 1.6;
+    width: auto;
+    flex-shrink: 0;
+  }
+
+  .tag {
+    font-family: var(--font-fustat);
+    font-size: 10px;
+    letter-spacing: -2.5%;
+    border-radius: 8px;
+    line-height: 125%;
+    padding: 6px 10px;
+  }
+  
+  .content_row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+  }
+}

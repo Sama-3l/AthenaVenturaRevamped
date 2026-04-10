@@ -14,17 +14,17 @@ export default function WhatWeDid() {
     <div className='flex flex-col'>
       <div className={styles.section}>
         <PageHeader title="What we did" className='text-(--color-foreground) border-(--color-foreground)'/>
-        <div className='flex flex-row w-full pt-8 pb-10'>
+        <div className='flex flex-col md:flex-row w-full gap-8 md:gap-0 pt-8 pb-10'>
           
           {/* Left - paragraph */}
-          <div className='w-1/2 px-12 pt-16'>
+          <div className='w-full md:w-1/2 px-6 md:px-12 pt-8 md:pt-16'>
             <p className={`${styles.body_text} w-[80%]`}>
               Pioneering in UI/UX design and development of all sorts, we have worked in a few niches. We have collaborated with brand agencies, built websites and apps MVPs and also helped brands maintain their current software.
             </p>              
           </div>
 
           {/* Right - carousel */}
-          <div className='w-1/2 pr-12 flex items-end pb-4'>
+          <div className='w-full md:w-1/2 px-6 md:px-0 md:pr-12 flex items-end'>
             <div className={styles.carousel_container}>
               
               
@@ -40,8 +40,8 @@ export default function WhatWeDid() {
           </div>
         </div>      
         <ImageCarousel images={["/Theo/theo_logo.png", "/Theo/theo_preview.png", "/Soho/soho_website_image.png", "/Cricklo/cricklo_4.png"]}/> 
-    </div>
-    <div className='h-[50vh] bg-(--color-background)'></div>
+      </div>
+    <div className='md:h-[50vh] h-0 bg-(--color-background)'></div>
       
     <div className='flex flex-col'>
       <WorkCard
