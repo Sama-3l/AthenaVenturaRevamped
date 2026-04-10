@@ -140,3 +140,21 @@
   background-color: var(--color-background);
 }
 
+@media (max-width: 640px) {
+  .btn_outline {
+    font-size: 12px;
+    padding: 12px 24px;
+  }
+
+  .btn_primary {
+    font-size: 12px;
+    padding: 12px 24px;
+  }
+
+  .cta_note {
+    position: absolute;
+    bottom: 88px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

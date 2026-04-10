@@ -204,3 +204,65 @@ h1.logo {
     width: 30vw;
   }
 }
+
+@media (max-width: 640px) {
+  h1.logo {
+    font-size: 12vw;
+  }
+
+  .hero-image {
+    width: 32vw;
+  }
+
+  .hero-image.image-1 {
+    top: 15%;
+    left: 6%;
+  }
+
+  .hero-para{
+    position: absolute;
+    width: 250px;
+    font-family: var(--font-fustat);
+    letter-spacing: -5%;
+    font-size: 12px;
+  }
+
+  .hero-image.image-2 {
+    top: 3%;
+    right: 10%;
+  }
+
+  .hero-image.image-3 {
+    top: 52%;
+    left: 15%;
+  }
+
+  .hero-image.image-4 {
+    bottom: 15%;
+    right: 10%;
+  }
+
+  .hero-para {
+    font-size: 16px;
+    width: 200px;
+  }
+
+  .hero-para.para-1 {
+    top: 26%;
+    left: 50%;
+  }
+
+  .hero-para.para-2 {
+    bottom: 12%;
+    left: 12%;
+  }
+
+  .page-title {
+    font-size: 6vw;
+    line-height: 6vw;
+  }
+
+  .page-subtitle {
+    width: 30vw;
+  }
+}

@@ -62,7 +62,7 @@ export default function Home() {
       {/* {!loaded && <LoadingScreen onComplete={handleComplete} gradientLoaded={gradientLoaded}/>} */}
       <div style={{ visibility: loaded ? 'visible' : 'hidden' }}>
         <div className="flex flex-col">
-          {/* <section id="home" >
+          <section id="home" >
             <div className="relative h-[150vh] ">
               <GradienBackground />          
               <div
@@ -95,7 +95,7 @@ export default function Home() {
 
               </div>
             </div>
-          </section> */}
+          </section>
           <section id="what-we-do">
             <div data-theme="inverted">
               <WhatWeDo />
