@@ -2,7 +2,7 @@ import { ShaderGradientCanvas, ShaderGradient } from '@shadergradient/react'
 import { useEffect, useState } from 'react'
 
 export function GradienBackground({ onLoad }: { onLoad?: () => void }) {
-  const [isLowEnd, setIsLowEnd] = useState(false)
+  const [isLowEnd, setIsLowEnd] = useState<boolean | null>(null)
 
   useEffect(() => {
     const cores = navigator.hardwareConcurrency ?? 4
@@ -13,8 +13,7 @@ export function GradienBackground({ onLoad }: { onLoad?: () => void }) {
     const renderer = gl?.getParameter(gl.RENDERER) as string ?? ''
     const isSoftwareRenderer = /swiftshader|llvmpipe|software/i.test(renderer)
 
-    const isLowEnd = cores <= 6 || memory <= 2 || isSoftwareRenderer
-    setIsLowEnd(isLowEnd)
+    setIsLowEnd(cores <= 6 || memory <= 2 || isSoftwareRenderer)
   }, [])
 
   useEffect(() => {
@@ -23,6 +22,8 @@ export function GradienBackground({ onLoad }: { onLoad?: () => void }) {
     }, 1500)
     return () => clearTimeout(timer)
   }, [onLoad])
+
+  if (isLowEnd === null) return null
 
   if (isLowEnd) {
     return (
