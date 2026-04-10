@@ -90,7 +90,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="px-8 py-3 bg-(--color-background) text-(--color-foreground) rounded-md ring-1 border-(--color-background) hover:bg-(--color-foreground) hover:text-(--color-background) disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors font-(family-name:--font-fustat) font-medium text-[12px] tracking-[-2.5%] cursor-pointer"
+          className="px-8 py-3 bg-(--color-background) text-(--color-foreground) rounded-md ring-[0.2px] border-white/30 hover:bg-(--color-foreground) hover:text-(--color-background) disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors font-(family-name:--font-fustat) font-medium text-[12px] tracking-[-2.5%] cursor-pointer"
         >
           {isSubmitting ? 'Sending...' : 'Say Hello!'}
         </button>
