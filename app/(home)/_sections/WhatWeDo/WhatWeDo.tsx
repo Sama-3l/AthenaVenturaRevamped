@@ -8,7 +8,7 @@ export default function WhatWeDo() {
         <div className='bg-(--color-foreground)'>
 
             <PageHeader title="What we do" subtitle='We have a lot to offer so choose what you’ll like us to do and combinations are obviously very welcome.  '/>
-            <div className='flex flex-row'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
                 <ServiceCard id={1} title={'Brand\nDesign'} subtitle={'We craft identities that don’t just look good—they feel intentional, memorable, and built for digital products. Every brand we design is made to live seamlessly across interfaces and experiences.'} bullets={[
                     "Logo, typography, color systems",
                     "Digital-first visual identity",
@@ -27,8 +27,6 @@ export default function WhatWeDo() {
                     "Responsive, fast performance",
                     "Clean, scalable code",
                 ]}/>
-            </div>
-            <div className='flex flex-row'>
                 <ServiceCard id={4} title={'App\nDevelopment'} subtitle={'We develop high-quality mobile applications designed for performance and seamless user experience. Every app is engineered to feel native, responsive, and reliable at scale.'} bullets={[
                     "Flutter cross-platform apps",
                     "Smooth UI implementation",

@@ -95,12 +95,12 @@ export default function Home() {
 
               </div>
             </div>
-          </section>
+          </section> */}
           <section id="what-we-do">
             <div data-theme="inverted">
               <WhatWeDo />
             </div>
-          </section> */}
+          </section>
           <section id="what-we-did">
           <div data-theme="default">
             <WhatWeDid />

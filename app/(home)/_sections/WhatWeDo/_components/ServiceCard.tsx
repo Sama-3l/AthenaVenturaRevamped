@@ -19,7 +19,7 @@ export default function ServiceCard({id, title, subtitle, bullets} : {id : numbe
                 style={{ background: 'linear-gradient(to top, #E33E3C 0%, #1C1C1C 100%)' }}
             />
 
-            <div className={`relative z-10 flex h-full flex-col px-5 border-(--color-background) ${isLastInRow ? 'border-r-0' : 'border-r-2'} justify-between`}>
+            <div className={`relative z-10 flex h-full flex-col px-5 border-(--color-background) border-r-2 justify-between`}>
                 <div className='flex flex-col gap-10'>
                     <div className='flex flex-col pt-6 gap-2'>
                         <p className={styles.service_number}> 
