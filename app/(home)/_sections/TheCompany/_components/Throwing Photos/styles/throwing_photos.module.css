@@ -41,3 +41,34 @@
 .photo_bottom_visible {
   transform: translateY(0) rotate(4deg);
 }
+
+@media (max-width: 1024) {
+  .photo {
+    width: 35%;
+  }
+
+  .photo_top {
+    bottom: 60%;
+  }
+
+  .photo_bottom{
+    left: 30%;
+    bottom: 22%;
+  }
+}
+
+@media (max-width: 768px) {
+  .photo {
+    width: 22%;
+  }
+
+  .photo_top {
+    bottom: 50%;
+    left: -1%;
+  }
+
+  .photo_bottom{
+    left: 74%;
+    bottom: -10%;
+  } 
+}

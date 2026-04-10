@@ -3,3 +3,11 @@
     font-size: 16px;
     color: var(--color-background);
 }
+
+@media (max-width: 640px) {
+    .body_text {
+        font-family: var(--font-fustat);
+        font-size: 12px;
+        color: var(--color-background);
+    }
+}
