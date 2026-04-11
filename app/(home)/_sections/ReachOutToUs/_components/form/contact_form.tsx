@@ -40,7 +40,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-6 md:w-[150%] px-6 w-full max-w-2xl md:pr-6 lg:px-8">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-6 md:w-[150%] px-4 sm:px-6 w-full max-w-2xl md:pr-6 lg:px-8">
       {/* Name and Email Row */}
       <div className="flex flex-row md:flex-nowrap flex-wrap gap-4">
         <div className='flex flex-col gap-2 w-full'>

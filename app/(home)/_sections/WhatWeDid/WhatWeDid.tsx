@@ -17,7 +17,7 @@ export default function WhatWeDid() {
         <div className='flex flex-col md:flex-row w-full gap-8 md:gap-0 pt-8 pb-10'>
           
           {/* Left - paragraph */}
-          <div className='w-full md:w-1/2 px-6 md:px-12 pt-8 md:pt-16'>
+          <div className='w-full md:w-1/2 px-6 md:px-12 sm:pt-8 pt-0 md:pt-16'>
             <p className={`${styles.body_text} w-[80%]`}>
               Pioneering in UI/UX design and development of all sorts, we have worked in a few niches. We have collaborated with brand agencies, built websites and apps MVPs and also helped brands maintain their current software.
             </p>              

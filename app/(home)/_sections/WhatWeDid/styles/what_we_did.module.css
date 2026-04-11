@@ -60,4 +60,7 @@
     min-height: 80svh;
   } */
 
+  .body_text{
+    font-size: 12px;
+  }
 }
