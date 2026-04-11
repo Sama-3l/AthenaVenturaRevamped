@@ -41,7 +41,7 @@ export default function WhatWeDid() {
         </div>      
         <ImageCarousel images={["/Theo/theo_logo.png", "/Theo/theo_preview.png", "/Soho/soho_website_image.png", "/Cricklo/cricklo_4.png"]}/> 
       </div>
-    <div className='md:h-[50vh] h-0 bg-(--color-background)'></div>
+    <div className='md:h-[50vh] h-[20vh] bg-(--color-background)'></div>
       
     <div className='flex flex-col'>
       <WorkCard

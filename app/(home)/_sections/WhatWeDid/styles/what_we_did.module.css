@@ -1,5 +1,5 @@
 .section {
-    height: 100svh;
+    /* height: 100svh; */
     background: linear-gradient(to bottom, #E33E3C 0%, #1C1C1C 100%);
 }
 
@@ -56,9 +56,8 @@
 }
 
 @media (max-width: 768px) {
-  .section {
+  /* .section {
     min-height: 80svh;
-    /* background: linear-gradient(to bottom, #E33E3C 0%, #1C1C1C 100%); */
-  }
+  } */
 
 }
