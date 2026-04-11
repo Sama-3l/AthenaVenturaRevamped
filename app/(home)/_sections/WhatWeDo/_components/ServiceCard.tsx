@@ -20,7 +20,7 @@ export default function ServiceCard({id, title, subtitle, bullets, className = "
                 style={{ background: 'linear-gradient(to top, #E33E3C 0%, #1C1C1C 100%)' }}
             />
 
-            <div className={`relative z-10 flex h-full flex-col px-5 border-(--color-background) ${className} justify-between`}>
+            <div className={`relative z-10 flex h-full flex-col sm:px-5 px-4 border-(--color-background) ${className} justify-between`}>
                 <div className='flex flex-col gap-10'>
                     <div className='flex flex-col pt-6 gap-2'>
                         <p className={styles.service_number}> 
@@ -46,7 +46,7 @@ export default function ServiceCard({id, title, subtitle, bullets, className = "
                 </div>
             </div>
 
-            <div className='relative z-10 border-(--color-background) border-r-2 border-b-2 cursor-pointer'>
+            <div className='relative z-10 border-(--color-background) border-b-2 cursor-pointer'>
                 <div className={`flex flex-row justify-between group-hover:border-(--color-foreground) border-(--color-background) border-t bg-transparent p-5 transition-colors duration-500`} onClick={() => scrollToSection("what-we-offer")}>
                     <h2 className={styles.cta}>See Pricing</h2>
                     <svg className={styles.arrow} width="24" height="29" viewBox="0 0 38 29" fill="none" xmlns="http://www.w3.org/2000/svg">

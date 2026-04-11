@@ -6,7 +6,7 @@ export default function WhatWeOffer() {
   return (
     <div className='pb-24'>
         <PageHeader title="What we offer" className = "text-(--color-foreground) border-(--color-foreground) pt-12"/>
-        <div className='py-8 md:py-16 px-6'>
+        <div className='py-8 md:py-16 sm:px-6 px-4'>
           <p className='font-(family-name:--font-fustat) tracking-[-0.5%]'>Every engagement starts with a scoping call. Prices are starting points.</p>
           <div className='lg:items-start columns-1 sm:columns-2 gap-4 pt-6 lg:grid lg:grid-cols-4 lg:gap-4'>
             <PackageCard title="Pixel" deadline={'1-2 weeks'} description={'Curating first impressions.'} core={{

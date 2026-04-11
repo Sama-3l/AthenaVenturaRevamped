@@ -33,8 +33,8 @@ export default function PackageCard({color = "bg-(--color-foreground)", title, d
 
   return (
     <div className="break-inside-avoid mb-4">
-        <div className={`w-full p-5 rounded-4xl`} style={{ backgroundColor: scheme.bg }}>
-            <div className='flex flex-col w-full gap-6 pb-16'>
+        <div className={`w-full sm:p-5 p-4 rounded-4xl`} style={{ backgroundColor: scheme.bg }}>
+            <div className='flex flex-col w-full gap-4 sm:gap-6 sm:pb-16 pb-10'>
                 <div className='flex flex-col w-full pb-2 gap-2' style={{ borderBottom: `1px solid ${scheme.text}` }}>
                     <div className='flex flex-row w-full justify-between'>
                         <h2 className={styles.package_title} style={{ color: scheme.text }}>
@@ -59,7 +59,7 @@ export default function PackageCard({color = "bg-(--color-foreground)", title, d
                                         <div className='flex flex-col pt-0.5 gap-1.5'>
                                             {values.map((value, i) => (
                                                 <div key={i} className='flex flex-row gap-3 items-center'>
-                                                    <div className={`w-1.5 h-1.5 rounded-full`} style={{ backgroundColor: scheme.text }}/>
+                                                    <div className={`w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full`} style={{ backgroundColor: scheme.text }}/>
                                                     <p className={styles.deliverable_body} style={{ color: scheme.text }}>{value}</p>
                                                 </div>
                                             ))}
@@ -72,7 +72,7 @@ export default function PackageCard({color = "bg-(--color-foreground)", title, d
                                         <div className='flex flex-col pt-0.5 gap-1.5'>
                                             {values.map((value, i) => (
                                                 <div key={i} className='flex flex-row gap-3 items-center'>
-                                                    <div className='w-1.5 h-1.5 rounded-full' style={{ backgroundColor: scheme.text }}/>
+                                                    <div className='w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full' style={{ backgroundColor: scheme.text }}/>
                                                     <p className={styles.deliverable_body} style={{ color: scheme.text }}>{value}</p>
                                                 </div>
                                             ))}
@@ -87,7 +87,7 @@ export default function PackageCard({color = "bg-(--color-foreground)", title, d
                         <div className='flex flex-col pt-0.5 pl-2.5 gap-1.5'>
                             {expansion.map((value, i) => (
                                 <div key={i} className='flex flex-row gap-3 items-center'>
-                                    <div className='w-1.5 h-1.5 rounded-full' style={{ backgroundColor: scheme.text }}/>
+                                    <div className='w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full' style={{ backgroundColor: scheme.text }}/>
                                     <p className={styles.deliverable_body} style={{ color: scheme.text }}>{value}</p>
                                 </div>
                             ))}
@@ -98,10 +98,10 @@ export default function PackageCard({color = "bg-(--color-foreground)", title, d
 
             <div className='flex flex-col gap-4'>
                 <div className='flex flex-col gap-2'>
-                    <p className='font-(family-name:--font-fustat) text-[12px] tracking-[-5%] font-bold leading-3' style={{ color: scheme.text }}>
+                    <p className='font-(family-name:--font-fustat) text-[10px] sm:text-[12px] tracking-[-5%] font-bold leading-3' style={{ color: scheme.text }}>
                         starting from
                     </p>
-                    <p className='font-(family-name:--font-fustat) text-[56px] tracking-[-5%] font-bold leading-16' style={{ color: scheme.text }}>
+                    <p className='font-(family-name:--font-fustat) text-[40px] sm:text-[56px] tracking-[-5%] font-bold sm:leading-16 leading-10' style={{ color: scheme.text }}>
                         {amount}
                     </p>
                 </div>

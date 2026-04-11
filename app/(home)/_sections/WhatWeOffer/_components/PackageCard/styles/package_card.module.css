@@ -34,3 +34,28 @@
     color: var(--color-background);
     font-size: 12px;
 }
+
+@media (max-width: 640px) {
+    .package_title{
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    .package_deadline{
+        font-size: 12px;  
+        font-weight: 600;      
+    }
+
+    .deliverable_heading {
+        font-size: 10px;
+    }
+
+    .deliverable_subheading {
+        font-size: 10px;
+    }
+
+    .deliverable_body {
+        font-size: 10px;
+        font-weight: 500;      
+    }
+}
