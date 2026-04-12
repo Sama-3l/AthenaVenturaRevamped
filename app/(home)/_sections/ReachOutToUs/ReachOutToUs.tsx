@@ -21,7 +21,7 @@ export default function ReachOutToUs() {
                     Book a call with us or drop us an email at:
                     </p>
                     <p className={`font-extrabold ${styles.page_body} underline`}>
-                        athenaventura@gmail.com
+                        contact@athenaventura.com
                     </p>
                 </div>
             </div>

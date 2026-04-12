@@ -25,6 +25,7 @@ body {
 h1.logo {
   font-family: var(--font-ibarra-italic);
   font-size: 8vw;
+  letter-spacing: -5%;
   color: var(--primary-color);
   z-index: 0;
 }

@@ -28,14 +28,14 @@ export default function Footer() {
                 </p>
             </div>
             <p className='font-(family-name:--font-fustat) md:text-[16px] text-[10px] tracking-[-0.5%] hidden sm:block'>
-                athenaventura@gmail.com
+                contact@athenaventura.com
             </p>
             <p className='font-(family-name:--font-fustat) md:text-[16px] text-[10px] tracking-[-0.5%] hidden sm:block'>
                 © 2026 Athena Ventura
             </p>
             <div className='flex flex-col gap-4 sm:hidden items-end'>
                 <p className='font-(family-name:--font-fustat) md:text-[16px] text-[10px] tracking-[-0.5%]'>
-                    athenaventura@gmail.com
+                    contact@athenaventura.com
                 </p>
                 <p className='font-(family-name:--font-fustat) md:text-[16px] text-[10px] tracking-[-0.5%]'>
                     © 2026 Athena Ventura
