@@ -39,7 +39,7 @@ export default function Cta() {
     `}>
       <div className={styles.cta_note}>
         <div className={styles.dot}></div>
-        <p>2 slots available for Apr'26</p>
+        <p>2 slots available for May'26</p>
       </div>
       <div className={styles.cta_buttons}>
         <button
