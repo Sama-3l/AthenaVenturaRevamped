@@ -64,7 +64,7 @@ export default function WhatWeOffer() {
             "Third-party APIs",
             "CI/CD Pipelines",
             "Custom Next.js admin panel"
-          ]} amount={'$3,000'} main={true} />
+          ]} amount={'$2,500'} main={true} />
             <PackageCard title="Monolith" deadline={'14-20 weeks'} description={'Make me one with everything.'} core={{
             "Core": [
               "Everything in Foundation",
@@ -78,7 +78,7 @@ export default function WhatWeOffer() {
             "Complete ecom solution",
             "Org. admin panel",
             "Data dashboards"
-          ]} amount={'$5,000'} />
+          ]} amount={'$4,500'} />
           </div>
         </div>
     </div>
