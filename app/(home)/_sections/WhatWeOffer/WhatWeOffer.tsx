@@ -25,7 +25,7 @@ export default function WhatWeOffer() {
             "Prototype",
             "Advanced Motion Design",
             "Design Audit"
-          ]} amount={'$599'} />
+          ]} amount={'$499'} />
             <PackageCard title="Signal" deadline={'1-3 weeks'} description={'Get me some internet money.'} core={{
             "Core": [
               "Everything in Pixel core",
@@ -44,7 +44,7 @@ export default function WhatWeOffer() {
             "CMS / blog",
             "Advanced SEO",
             "Extra pages"
-          ]} amount={'$899'} />
+          ]} amount={'$599'} />
             <PackageCard title="Foundation" deadline={'8-12 weeks'} description={'An app to rule them all.'} core={{
             "Core": [
               "Everything in Pixel core",
