@@ -25,7 +25,7 @@ export default function WhatWeOffer() {
             "Prototype",
             "Advanced Motion Design",
             "Design Audit"
-          ]} amount={'$499'} />
+          ]} amount={'$399'} />
             <PackageCard title="Signal" deadline={'1-3 weeks'} description={'Get me some internet money.'} core={{
             "Core": [
               "Everything in Pixel core",
@@ -44,7 +44,7 @@ export default function WhatWeOffer() {
             "CMS / blog",
             "Advanced SEO",
             "Extra pages"
-          ]} amount={'$599'} />
+          ]} amount={'$499'} />
             <PackageCard title="Foundation" deadline={'8-12 weeks'} description={'An app to rule them all.'} core={{
             "Core": [
               "Everything in Pixel core",
@@ -64,7 +64,7 @@ export default function WhatWeOffer() {
             "Third-party APIs",
             "CI/CD Pipelines",
             "Custom Next.js admin panel"
-          ]} amount={'$2,500'} main={true} />
+          ]} amount={'$2,200'} main={true} />
             <PackageCard title="Monolith" deadline={'14-20 weeks'} description={'Make me one with everything.'} core={{
             "Core": [
               "Everything in Foundation",
@@ -78,7 +78,7 @@ export default function WhatWeOffer() {
             "Complete ecom solution",
             "Org. admin panel",
             "Data dashboards"
-          ]} amount={'$4,500'} />
+          ]} amount={'$3,500'} />
           </div>
         </div>
     </div>
