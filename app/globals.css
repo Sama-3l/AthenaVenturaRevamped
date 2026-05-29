@@ -151,6 +151,29 @@ h1.logo {
   transition: width 0.3s ease;
 }
 
+.image-swap-container {
+  position: relative;
+}
+
+.image-swap-container .image-default,
+.image-swap-container .image-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.image-swap-container .image-hover {
+  opacity: 0;
+}
+
+.image-swap-container:hover .image-default {
+  opacity: 0;
+}
+
+.image-swap-container:hover .image-hover {
+  opacity: 1;
+}
+
 /* ── Tablet (max 1024px) ── */
 @media (max-width: 1024px) {
   h1.logo {
