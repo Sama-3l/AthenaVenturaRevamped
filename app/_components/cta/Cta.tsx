@@ -3,13 +3,20 @@ import React, { useEffect, useState } from 'react'
 import styles from './cta.module.css'
 import { useTheme } from '@/app/lib/ThemeContext'
 import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
 
 export default function Cta() {
   const [visible, setVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
   const theme = useTheme()
+  const pathname = usePathname()
+  const router = useRouter()
 
   const scrollToSection = (id: string) => {
+    if (pathname !== '/') {
+      router.push(`/#${id}`)
+      return
+    }
     const el = document.getElementById(id)
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' })

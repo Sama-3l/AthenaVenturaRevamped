@@ -3,11 +3,14 @@ import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import styles from './navbar.module.css'
 import { useTheme } from '@/app/lib/ThemeContext'
+import { usePathname, useRouter } from 'next/navigation'
 
 export default function NavBar() {
   const [hovered, setHovered] = useState(false)
   const [activeSection, setActiveSection] = useState<string | null>(null)
   const theme = useTheme()
+  const pathname = usePathname()
+  const router = useRouter()
   const menuItems = [
     { label: 'What we do', id: 'what-we-do' },
     { label: 'What we did', id: 'what-we-did' },
@@ -17,6 +20,10 @@ export default function NavBar() {
   ]
   
   const scrollToSection = (id: string) => {
+    if (pathname !== '/') {
+      router.push(`/#${id}`)
+      return
+    }
     const el = document.getElementById(id)
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' })
@@ -47,7 +54,7 @@ export default function NavBar() {
   return (
     <div className={`${styles.navbar} ${theme === 'inverted' ? styles.navbar_inverted : ''}`}>
       <div className={`${styles.overlay} ${hovered ? styles.overlay_visible : ''}`} />
-      <Image className={styles.logo} src="/logo_white.svg" alt="My Logo" width={36} height={100} onClick={() => scrollToSection("home")} />
+      <Image className={styles.logo} src="/logo_white.svg" alt="My Logo" width={36} height={100} onClick={() => pathname !== '/' ? router.push('/') : scrollToSection("home")} />
       
       <div
         className={styles.menu}
