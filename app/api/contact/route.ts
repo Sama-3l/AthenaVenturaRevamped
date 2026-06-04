@@ -35,8 +35,21 @@ export async function POST(request: Request) {
 
   try {
     await resend.emails.send({
-      from: 'onboarding@resend.dev', // Use your verified domain
-      to: 'athenaventur@gmail.com',
+      from: 'Athena Ventura <contact@athenaventura.com>', // Use your verified domain
+      to: [email],
+      bcc: 'contact@athenaventura.com',
+      replyTo: email,
+      subject: `Thank you for contacting us.`,
+      html: `
+        <p>See you soon, partne.</p>
+        <br>
+        <p>But seriously, glad to receive a message. Expect a response soon, no matter what your message is.</p>
+      `,
+    });
+
+    await resend.emails.send({
+      from: 'Website <contact@athenaventura.com>', // Use your verified domain
+      to: ["contact@athenaventura.com"],
       replyTo: email,
       subject: `New Contact Form Submission from ${name}`,
       html: `
