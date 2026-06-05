@@ -34,7 +34,7 @@ const fustat = localFont({
 
 export const metadata: Metadata = {
   title: "Athena Ventura",
-  description: "Money problems? Organizing problems? OCD about managing your things? We can build a software for that!! Do reach out, love you.",
+  description: "Money problems? Organizing problems? OCD about managing your things? We can build a software for that!! Do reach out.",
   icons: {
     icon: [
       {
