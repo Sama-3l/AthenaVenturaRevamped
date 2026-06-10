@@ -92,9 +92,9 @@ export async function POST(request: Request) {
       replyTo: 'contact@athenaventura.com',
       subject: `Thank you for contacting us.`,
       html: `
-        <p>See you soon, partne.</p>
+        <p>See you soon, partner.</p>
         <br>
-        <p>But seriously, glad to receive a message. Expect a response soon, no matter what your message is.</p>
+        <p>Glad to receive your message. Expect a response soon, no matter what your message is.</p>
       `,
     });
 
