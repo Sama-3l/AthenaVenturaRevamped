@@ -38,6 +38,10 @@ export default function Cta() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [lastScrollY])
 
+  const formatter = new Intl.DateTimeFormat('en', { month: 'long' });
+  const now = new Date();
+  const nextMonth = new Date(now.getFullYear(), now.getMonth() + 1);
+
   return (
     <div className={`
       ${styles.cta_bar}
@@ -46,7 +50,7 @@ export default function Cta() {
     `}>
       <div className={styles.cta_note}>
         <div className={styles.dot}></div>
-        <p>2 slots available for May'26</p>
+        <p>2 slots available for {formatter.format(nextMonth)}'26</p>
       </div>
       <div className={styles.cta_buttons}>
         <button

@@ -106,7 +106,7 @@ export default function ImageCarousel({images} : {images : string[]}) {
         </div>
         <div className={styles.image_set}>
           {images.map((image, index) => (
-            <Image key={index} src={image} height={300} width={300} alt="" unoptimized loading="eager" className="h-60 md:h-75 w-auto shrink-0 pointer-events-none" />
+            <Image key={index} src={image} height={300} width={300} alt="" unoptimized loading="eager" className="h-60 md:h-75 w-auto shrink-0 pointer-events-none"  />
           ))}
         </div>
       </div>

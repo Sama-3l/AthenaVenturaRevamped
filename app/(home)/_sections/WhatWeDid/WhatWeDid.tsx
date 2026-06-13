@@ -61,6 +61,17 @@ export default function WhatWeDid() {
         backgroundColor="#EF5423"
       />
       <WorkCard
+        title="Paisa Rupay"
+        subtitle={<>We turned loan<br/>chaos into clarity.</>}
+        body="Paisa Rupay came to us as a young loan facilitation company with a clear problem — borrowers were getting lost in a broken system of rejections, hidden fees, and spam calls. We helped them find their voice, shape their positioning, and build a digital presence that spoke directly to that frustration. The result is a brand that feels less like a financial service and more like a trusted advisor."
+        tags={["UI/UX", "Branding", "Foundation Development"]}
+        images={["/PaisaRupay/paisa_rupay_showcase_1.png", "/PaisaRupay/paisa_rupay_showcase_2.png", "/PaisaRupay/paisa_rupay_showcase_3.png", "/PaisaRupay/paisa_rupay_showcase_4.png"]}
+        backgroundColor="#DADADA"
+        tagTextColor="#FFFFFF"
+        tagBackgroundColor='#141414'
+        textColor='#141414'
+      />
+      <WorkCard
         title="distr1ct.one"
         subtitle={<>Pause, work, chat,<br/>coffee. A cafe in Lucknow.</>}
         body="A concept website for a new & different coffee place in Lucknow. They already had the brand design and menu, etc. done. The idea behind the website was to tell the story behind the store, welcome the audience make the place their comfort stop for work, meeting friends, etc. and business SEO."
