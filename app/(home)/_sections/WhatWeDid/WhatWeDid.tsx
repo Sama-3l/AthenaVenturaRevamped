@@ -64,7 +64,7 @@ export default function WhatWeDid() {
         title="Paisa Rupay"
         subtitle={<>We turned loan<br/>chaos into clarity.</>}
         body="Paisa Rupay came to us as a young loan facilitation company with a clear problem — borrowers were getting lost in a broken system of rejections, hidden fees, and spam calls. We helped them find their voice, shape their positioning, and build a digital presence that spoke directly to that frustration. The result is a brand that feels less like a financial service and more like a trusted advisor."
-        tags={["UI/UX", "Branding", "Foundation Development"]}
+        tags={["FinTech", "Branding", "Foundation Development"]}
         images={["/PaisaRupay/paisa_rupay_showcase_1.png", "/PaisaRupay/paisa_rupay_showcase_2.png", "/PaisaRupay/paisa_rupay_showcase_3.png", "/PaisaRupay/paisa_rupay_showcase_4.png"]}
         backgroundColor="#DADADA"
         tagTextColor="#FFFFFF"
