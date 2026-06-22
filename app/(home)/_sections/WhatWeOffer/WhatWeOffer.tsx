@@ -44,7 +44,7 @@ export default function WhatWeOffer() {
             "CMS / blog",
             "Advanced SEO",
             "Extra pages"
-          ]} amount={'$699'} />
+          ]} amount={'$599'} />
             <PackageCard title="Foundation" deadline={'8-12 weeks'} description={'An app to rule them all.'} core={{
             "Core": [
               "Everything in Pixel core",
