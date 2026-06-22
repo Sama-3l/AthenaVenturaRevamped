@@ -25,7 +25,7 @@ export default function WhatWeOffer() {
             "Prototype",
             "Advanced Motion Design",
             "Design Audit"
-          ]} amount={'$399'} />
+          ]} amount={'$299'} />
             <PackageCard title="Signal" deadline={'1-3 weeks'} description={'Get me some internet money.'} core={{
             "Core": [
               "Everything in Pixel core",
