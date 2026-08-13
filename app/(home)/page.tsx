@@ -76,7 +76,6 @@ export default function Home() {
                   <Image src="/cricklo_mockup_2.png" alt="" width={800} height={800} />
                 </div>
                 <div className="hero-image image-2">
-                  <div className="image-swap-container">
                     <Image
                       className="image-default"
                       src="/soho_website_image.png"
@@ -84,6 +83,7 @@ export default function Home() {
                       width={800}
                       height={800}
                     />
+                  {/* <div className="image-swap-container">
                     <Image
                       className="image-hover"
                       src="/soho/soho_showcase.gif"
@@ -91,13 +91,13 @@ export default function Home() {
                       width={800}
                       height={800}
                     />
-                  </div>
+                  </div> */}
                 </div>
                 <div className="hero-image image-3">
-                  <div className="image-swap-container">
                     <Image className="image-default" src="/helios_website_sample.png" alt="" width={800} height={800} />
+                  {/* <div className="image-swap-container">
                     <Image className="image-hover" src="/helios_showcase.gif" alt="" width={800} height={800} unoptimized/>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="hero-image image-4">
                   <Image src="/bettersplit_image.png" alt="" width={800} height={800} />
