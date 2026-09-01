@@ -103,7 +103,7 @@ export default function Home() {
                   <Image src="/bettersplit_image.png" alt="" width={800} height={800} />
                 </div>
                 <p className="hero-para para-1">
-                  Great design starts with thinking outside the box. In some cases, it’s the layout box that we are talking about.
+                  Your timeline, built around your next win be it revenue generated, investment secured or growth achieved.
                 </p>
                 <p className="hero-para para-2">
                   Two Co-Founders curating designs and software from ideation to production.

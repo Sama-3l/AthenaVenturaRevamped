@@ -11,7 +11,7 @@ export default function WhatWeOffer() {
           <div className='lg:items-start columns-1 sm:columns-2 gap-4 pt-6 lg:grid lg:grid-cols-4 lg:gap-4'>
             <PackageCard title="Pixel" deadline={'1-2 weeks'} description={'Curating first impressions.'} core={{
             "UI": [
-              "Wireframes",
+              "Brand & UI wireframes",
               "High-Fidelity Screens",
               "Responsive Design",
               "Component Library"
@@ -21,12 +21,12 @@ export default function WhatWeOffer() {
               "Asset Exports"
             ]
           }} expansion={[
-            "Brand Identity",
+            "Full Brand Identity System",
             "Prototype",
             "Advanced Motion Design",
             "Design Audit"
-          ]} amount={'$299'} />
-            <PackageCard title="Signal" deadline={'1-3 weeks'} description={'Get me some internet money.'} core={{
+          ]} amount={'$349'} />
+            <PackageCard title="Signal" deadline={'2-3 weeks'} description={'Get me some internet money.'} core={{
             "Core": [
               "Everything in Pixel core",
               "Sales funnels, business portfolio, etc.",
@@ -39,13 +39,13 @@ export default function WhatWeOffer() {
               "30-day post launch support window",
             ]
           }} expansion={[
-            "Shopify E-commerce",
+            "Shopify custom or template store",
             "Next.js custom web apps",
+            "Product & promo asset design",
             "CMS / blog",
-            "Advanced SEO",
-            "Extra pages"
-          ]} amount={'$599'} />
-            <PackageCard title="Foundation" deadline={'8-12 weeks'} description={'An app to rule them all.'} core={{
+            "Advanced SEO"
+          ]} amount={'$799'} />
+            <PackageCard title="Foundation" deadline={'8-12 weeks'} description={'An app built to pay for itself.'} core={{
             "Core": [
               "Everything in Pixel core",
               "System design",
@@ -64,21 +64,21 @@ export default function WhatWeOffer() {
             "Third-party APIs",
             "CI/CD Pipelines",
             "Custom Next.js admin panel"
-          ]} amount={'$2,200'} main={true} />
-            <PackageCard title="Monolith" deadline={'14-20 weeks'} description={'Make me one with everything.'} core={{
+          ]} amount={'$2,800'} main={true} />
+            <PackageCard title="Monolith" deadline={'16-24 weeks'} description={'Make me one with everything'} core={{
             "Core": [
               "Everything in Foundation",
               "Everything in Signal",
+              "Revenue & investment-cycle roadmap",
               "Shared Design Systems",
               "SEO & analytics",
-              "Full QA suite",
-              "60-days post-launch support"
+              "90-days post-launch support"
             ]
           }} expansion={[
             "Complete ecom solution",
-            "Org. admin panel",
-            "Data dashboards"
-          ]} amount={'$3,500'} />
+            "Data dashboards & analytics",
+            "Social, content & ad management"
+          ]} amount={'$5,200'} />
           </div>
         </div>
     </div>
